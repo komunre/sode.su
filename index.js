@@ -33,6 +33,6 @@ rl.on("SIGINT", rl => {
                 ? process.exit(0)
                 : rl.output.write("\x1B[1K> "
             ))
-})
+});
 
 server.start();
