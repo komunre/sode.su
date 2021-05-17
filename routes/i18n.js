@@ -7,10 +7,14 @@ router.use((req, res, next) => {
     next();
 });
 
-router.get("/*.json", (req, res) => {
-    return res
+router.get("/*.json", async (req, res, next) => {
+    res
         .type("json")
-        .sendFile(path.resolve(`public/i18n/${req.params[0]}.json`));
+        .sendFile(path.resolve(`public/i18n${req.path}`), err => {
+            if (err) {
+                next(404);
+            }
+        });
 });
 
 module.exports = router;

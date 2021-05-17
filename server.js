@@ -1,4 +1,5 @@
 const fs               = require("fs");
+const path             = require("path");
 const https            = require("https");
 const express          = require("express");
 const cookieParser     = require("cookie-parser");
@@ -9,7 +10,8 @@ const helmet           = require("helmet");
 const { compress, decompress } = require("express-compress");
 
 const indexRouter = require("./routes");
-const i18nRouter  = require("./routes/i18n")
+const i18nRouter  = require("./routes/i18n");
+const imgRouter   = require("./routes/img");
 
 
 
@@ -34,8 +36,17 @@ class Server
             next();
         });
 
-        this.app.use("/", indexRouter);
+        this.app.use("/",     indexRouter);
         this.app.use("/i18n", i18nRouter);
+        this.app.use("/img",  imgRouter);
+
+        this.app.use((err, req, res, next) => {
+            res
+                .status(err)
+                .type(".html")
+                .set("Cache-Control", "public, max-age: 0")
+                .sendFile(path.resolve(`html/errors/${err}.html`));
+        });
 
         if (this.port == 443) {
             this.server = https.createServer({

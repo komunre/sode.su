@@ -37,7 +37,7 @@ router.get("/sitemap.xml", async (req, res) => {
         .sendFile(path.resolve("public/sitemap.xml"));
 });
 
-router.get("/favicon.ico", (req, res) => {
+router.get("/favicon.ico", async(req, res) => {
     return res
         .type(".ico")
         .sendFile(path.resolve("public/img/favicon.ico"));
