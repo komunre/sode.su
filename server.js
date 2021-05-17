@@ -9,6 +9,7 @@ const helmet           = require("helmet");
 const { compress, decompress } = require("express-compress");
 
 const indexRouter = require("./routes");
+const i18nRouter  = require("./routes/i18n")
 
 
 
@@ -34,6 +35,7 @@ class Server
         });
 
         this.app.use("/", indexRouter);
+        this.app.use("/i18n", i18nRouter);
 
         if (this.port == 443) {
             this.server = https.createServer({

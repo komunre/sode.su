@@ -26,7 +26,7 @@
 		"STYLE":      "t/style"
 	},
 	"PATHS": {
-		"DICTIONARIES":   "dict/",
+		"I18N":           "i18n/",
 		"PAGES":          "html/",
 		"LAYOUT":         "html/",
 		"SCRIPTS":        "js/",

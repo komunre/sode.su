@@ -5,7 +5,7 @@ const router  = express.Router();
 router.use((req, res, next) => {
     res.set("Cache-Control", "public, max-age=3600");
     next();
-})
+});
 
 router.get("/robots.txt", async (req, res) => {
     return res
@@ -35,6 +35,12 @@ router.get("/sitemap.xml", async (req, res) => {
     return res
         .type(".xml")
         .sendFile(path.resolve("public/sitemap.xml"));
+});
+
+router.get("/favicon.ico", (req, res) => {
+    return res
+        .type(".ico")
+        .sendFile(path.resolve("public/img/favicon.ico"));
 });
 
 module.exports = router;
