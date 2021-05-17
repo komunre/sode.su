@@ -1,31 +1,38 @@
+const rl = require("serverline");
+
 const Server = require("./server");
 
 process.stdin.setEncoding("utf8");
 process.stderr.setEncoding("utf8");
 
-const PORT = process.env.PORT || 443;
-
+const PORT   = process.env.PORT || 443;
 const server = new Server(PORT);
 
-this.rl = require("readline").createInterface({
-    input:    process.stdin,
-    output:   process.stdout,
-    terminal: false
-});
+rl.init();
+rl.setCompletion(["stop", "reload"]);
+rl.setPrompt("> ");
 
-this.rl.on("line", line => {
-    if (line !== null) {
-        const command = line.trim();
+rl.on("line", line => {
+    console.log(line);
 
-        switch (command) {
-        case 'q':
+    const command = line.trim();
+
+    switch (command) {
+        case 'stop':
             server.stop();
         break;
-        case 'r':
+        case 'reload':
             server.reload();
         break;
-        }
     }
 });
+
+rl.on("SIGINT", rl => {
+    rl.question("Confirm exit: ", answer =>
+        answer.match(/^y(es)?$/i)
+                ? process.exit(0)
+                : rl.output.write("\x1B[1K> "
+            ))
+})
 
 server.start();
