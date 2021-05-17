@@ -1,0 +1,29 @@
+User-agent: *
+
+Allow: /*?lang=
+Allow: /*?p=
+
+Disallow: /api/
+Disallow: /html/
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /verify/
+
+Disallow: /home/
+Disallow: /friends/
+Disallow: /chats/
+Disallow: /c/
+Disallow: /feed/
+Disallow: /feedback/
+Disallow: /clubs/
+Disallow: /images/
+Disallow: /videos/
+
+Disallow: /settings/
+Disallow: /themes/
+Disallow: /bookmarks/
+Disallow: /stickers/
+Disallow: /polls/
+Disallow: /account/
+Disallow: /moderation/

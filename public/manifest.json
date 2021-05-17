@@ -1,0 +1,16 @@
+{
+	"name": "sode.su",
+	"short_name": "sode.su",
+	"lang": "en-SU",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "any",
+	"theme_color": "#7D80B8",
+	"background_color": "#F0F8FF",
+	"description": "A social network with cool markup and custom themes for doomers and other autists.",
+	"icons": [{
+		"src": "img/icon-192.png",
+		"sizes": "192x192",
+		"type": "image/png"
+	}]
+}

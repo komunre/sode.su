@@ -1,0 +1,43 @@
+	<main id="container">
+		<nav id="menu-box">
+			<ul id="menu">
+				<li class="menu"><a href="home"><p class="notice" id="menu-notice-home" data-counter="0"></p></a></li>
+				<li class="menu"><a href="friends"><p class="notice" id="menu-notice-friends" data-counter="0"></p></a></li>
+				<!-- <li class="menu"><a href="chats"><p class="notice" id="menu-notice-chats" data-counter="0">0</p></a></li> -->
+				<li class="menu"><a href="feed"><p class="notice" id="menu-notice-feed" data-counter="1">α</p></a></li>
+				<li class="menu"><a href="clubs"><p class="notice" id="menu-notice-clubs" data-counter="1">α</p></a></li>
+				<li class="menu"><a href="images"><p class="notice" id="menu-notice-images" data-counter="1">α</p></a></li>
+				<li class="menu"><a href="videos"><p class="notice" id="menu-notice-videos" data-counter="1">α</p></a></li>
+				<li class="menu"><a href="music"><p class="notice" id="menu-notice-music" data-counter="1">α</p></a></li>
+			</ul>
+		</nav>
+
+		<nav id="settings-box">
+			<ul id="settings">
+				<li class="setting" id="edit-profile-link"><a href="profile"></a></li>
+				<li class="setting" id="edit-club-link"><a href="club"></a></li>
+				<li class="setting" id="styles-link"><a href="styles"></a></li>
+				<li class="setting" id="account-link"><a href="account"></a></li>
+				<li class="setting" id="moderation-link"><a href="moderation"></a></li>
+				<li class="setting" id="language-select"><select>
+					<option value="en" class="setting-language" id="language-en"> English </option>
+					<option value="ru" class="setting-language" id="language-ru"> Русский </option>
+				</select></li>
+			</ul>
+		</nav>
+
+		<div id="new-album-box">
+			<form enctype="multipart/form-data" action="engine/new_album.php" method="POST" name="new-album" id="new-album" data-state="collapsed">
+				<h1></h1>
+				<label for="new-album-name" id="new-album-name-box"><br /><input type="text" name="name" id="new-album-name"></label> <br />
+				<label for="new-album-description" id="new-album-description-box"><br /><textarea name="description" id="new-album-description"></textarea></label> <br />
+				<label for="new-album-private" class="new-album-access-box" id="new-album-private-box"><input type="radio" name="access" class="new-album-access" id="new-album-private" value="private" checked /></label>
+				<label for="new-album-protected" class="new-album-access-box" id="new-album-protected-box"><input type="radio" name="access" class="new-album-access" id="new-album-protected" value="protected" /></label>
+				<label for="new-album-public" class="new-album-access-box" id="new-album-public-box"><input type="radio" name="access" class="new-album-access" id="new-album-public" value="public" /></label>
+				<input type="submit" name="new-album-submit" value="" id="new-album-submit" />
+			</form>
+		</div>
+		<p id="albums-stub"></p>
+		<ul id="albums">
+		</ul>
+	</main>

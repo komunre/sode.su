@@ -1,0 +1,65 @@
+	<div id="post-frame-box">
+		<div id="post-frame">
+			<article id="post">
+				<div id="post-more-options">
+					<div id="post-more-options-list">
+						<button class="open-post-more-option" id="share-post-button"></button>
+						<button class="open-post-more-option" id="archive-post-button"></button>
+						<button class="open-post-more-option" id="report-post-button"></button>
+						<button class="open-post-more-option" id="delete-post-button"></button>
+						<p id="share-post-link"></p>
+						<a href="" id="archive-post-link" download></a>
+					</div>
+				</div>
+				<div id="post-header">
+					<a href="" rel="author" id="post-avatar-box"><img src="" alt="" id="post-avatar" /></a>
+					<p id="post-author-name-box"><a href="" id="post-author-name"></a></p>
+					<p id="post-datetime"></p>
+					<div id="post-author-info">
+						<img src="" alt="" id="post-author-info-avatar" />
+						<p id="post-author-info-name"><p>
+						<p id="post-author-info-alias"><p>
+						<p id="post-author-info-location-box"><span id="post-author-info-location"></span><p>
+						<p id="post-author-info-languages-box"><span id="post-author-info-languages"></span></p>
+						<p id="post-author-info-website-box"><a id="post-author-info-website"></a></p>
+					</div>
+				</div>
+				<div id="post-text"></div>
+			</article>
+			<div id="post-options">
+				<button class="open-post-option" id="repost-post-button"></button>
+				<button class="open-post-option" id="dislike-post-button" data-checked="false"></button>
+				<button class="open-post-option" id="like-post-button" data-checked="false"></button>
+			</div>
+			<button id="post-show-more-comments-button" data-hidden="false"></button>
+			<button id="post-show-all-comments-button" data-hidden="false"></button>
+			<div id="post-comments-box">
+				<div class="preloader" id="post-comments-preloader"></div>
+				<ul id="post-comments">
+				</ul>
+			</div>
+			<form enctype="multipart/form-data" action="api/new_post_comment" method="POST" name="new-post-comment" id="new-post-comment" data-options="none">
+				<input type="hidden" name="owner-type" id="new-post-comment-owner-type" value="" />
+				<input type="hidden" name="owner-id" id="new-post-comment-owner-id" value="" />
+				<input type="hidden" name="number" value="" id="new-post-comment-number" />
+				<ul id="new-post-comment-rich">
+					<li class="new-post-comment-rich" id="new-post-comment-rich-quote"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-bold"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-italic"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-underlined"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-overlined"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-strikethrough"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-superscript"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-subscript"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-monospace"></li>
+					<li class="new-post-comment-rich" id="new-post-comment-rich-spoiler"></li>
+				</ul>
+				<textarea name="text" placeholder="Твой комментарий, максимум 1500 символов..." id="new-post-comment-text" required></textarea>
+				<button id="new-post-comment-attach-toggle"></button>
+				<button id="new-post-comment-emoji-toggle"></button>
+				<select id="new-post-comment-user"></select>
+				<input type="reset" value="" id="new-post-comment-reset" />
+				<input type="submit" value="" id="new-post-comment-submit" />
+			</form>
+		</div>
+	</div>

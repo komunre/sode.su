@@ -1,0 +1,188 @@
+	<script src="js/constants.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/images.js" type="text/javascript"></script>
+	<script src="js/videos.js" type="text/javascript"></script>
+	<script src="js/music.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var albums_count,
+		albums;
+
+		function get_album(name, album) {
+			var $album = $("<li>", {
+				class: "album-box",
+				id: "album-" + name
+			}).on("click", function() {
+				$(this).children(".album")[0].click();
+			}).append(
+				$("<a>", {
+					class: "album",
+					href: "@/" + getCookie("id") + "/images/" + name
+				}).append(
+					$("<img>", {
+						class: "album-poster",
+						src: album["poster"] === "" ? "img/album.png" : ("images/" + album["poster"]),
+						alt: ""
+					})
+				).append(
+					$("<h2>", {
+						class: "album-name"
+					}).html(name == "@" ? DICTIONARY["IMAGES"]["ALBUMS"]["@"]["name"] : (name == "+" ? DICTIONARY["IMAGES"]["ALBUMS"]["+"]["name"] : name))
+				).append(
+					$("<p>", {
+						class: "album-description"
+					}).html(name == "@" ? DICTIONARY["IMAGES"]["ALBUMS"]["@"]["description"] : (name == "+" ? DICTIONARY["IMAGES"]["ALBUMS"]["+"]["description"] : album["description"]))
+				)
+			).append(
+				$("<p>", {
+					class: "album-images-count"
+				}).html(album["images_count"] + DICTIONARY["IMAGES"]["ALBUMS"]["IMAGES_COUNT"][String(album["images_count"] % 10)])
+			).append(
+				$("<p>", {
+					class: "album-modifier album-modifier-" + album["access"]
+				}).html(DICTIONARY["IMAGES"]["ALBUMS"][album["access"].toUpperCase()])
+			)
+
+			return $album;
+		}
+
+		$(window).on("dict_defined", function() {
+			$("title").html(DICTIONARY["IMAGES"]["TITLE"]);
+			$("#new-album h1").html(DICTIONARY["IMAGES"]["NEW_ALBUM"]["TITLE"]);
+			$("#new-album-name-box").prepend(DICTIONARY["IMAGES"]["NEW_ALBUM"]["NAME"]);
+			$("#new-album-description-box").prepend(DICTIONARY["IMAGES"]["NEW_ALBUM"]["DESCRIPTION"]);
+			$("#new-album-name").attr("placeholder", DICTIONARY["IMAGES"]["NEW_ALBUM"]["NAME_PLACEHOLDER"]);
+			$("#new-album-description").attr("placeholder", DICTIONARY["IMAGES"]["NEW_ALBUM"]["DESCRIPTION_PLACEHOLDER"]);
+			$("#new-album-private-box").append(DICTIONARY["IMAGES"]["NEW_ALBUM"]["PRIVATE"]);
+			$("#new-album-protected-box").append(DICTIONARY["IMAGES"]["NEW_ALBUM"]["PROTECTED"]);
+			$("#new-album-public-box").append(DICTIONARY["IMAGES"]["NEW_ALBUM"]["PUBLIC"]);
+			$("#new-album-private-box").attr("title", DICTIONARY["IMAGES"]["NEW_ALBUM"]["PRIVATE_TITLE"]);
+			$("#new-album-protected-box").attr("title", DICTIONARY["IMAGES"]["NEW_ALBUM"]["PROTECTED_TITLE"]);
+			$("#new-album-public-box").attr("title", DICTIONARY["IMAGES"]["NEW_ALBUM"]["PUBLIC_TITLE"]);
+			$("#new-album-submit").val(DICTIONARY["IMAGES"]["NEW_ALBUM"]["SUBMIT"]);
+
+			$("#preloader").css("display", "block");
+			var $list = $("#albums").empty();
+			$(window).scrollTop(0);
+
+			$.post(
+				"engine/albums.php",
+				{
+					owner_type: owner_is_club ? "club" : "individ",
+					owner_id: owner.substring(2, owner.length)
+				},
+				function(data) {
+					if (data["status"] === 0) {
+						if (data["count"] === 0) {
+							$("#albums-stub").html(DICTIONARY["IMAGES"]["ALBUMS"]["STUB"])
+							.css("display", "block");
+							$("#preloader").css("display", "none");
+
+						} else {
+							for (album in data["albums"])
+								if (album != "@" && album != "+")
+									$list.append(get_album(album, data["albums"][album]));
+							$list.prepend(get_album("+", data["albums"]["+"]))
+							.prepend(get_album("@", data["albums"]["@"]));
+							$("#preloader").css("display", "none");
+						}
+
+					} else {
+						var error;
+						switch (data["status"]) {
+						case ERRORS.ERR_DATABASE_CONNECTION_FAILED: error = DICTIONARY["ERRORS"]["DATABASE_CONNECTION_FAILED"]; break;
+						case ERRORS.ERR_BANNED: error = DICTIONARY["ERRORS"]["BANNED"][0] + data["until"] + DICTIONARY["ERRORS"]["BANNED"][1] + data["reason"] + DICTIONARY["ERRORS"]["BANNED"][2]; break;
+						case ERRORS.ERR_USERID_NOT_FOUND: error = DICTIONARY["ERRORS"]["USERID_NOT_FOUND"]; break;
+						case ERRORS.ERR_WRONG_PASSKEY: error = DICTIONARY["ERRORS"]["WRONG_PASSKEY"]; break;
+						case ERRORS.ERR_VERIFICATION_FAILED: error = DICTIONARY["ERRORS"]["VERIFICATION_FAILED"]; break;
+						case ERRORS.ERR_UNIDENTIFIED_SESSION: error = DICTIONARY["ERRORS"]["UNIDENTIFIED_SESSION"]; break;
+						case ERRORS.ERR_NO_REQUIRED_PARAMETERS_IN_REQUEST: error = DICTIONARY["ERRORS"]["NO_REQUIRED_PARAMETERS_IN_REQUEST"]; break;
+						default: error = DICTIONARY["ERRORS"]["DEFAULT"]; break;
+						}
+						swal(DICTIONARY["IMAGES"]["ALBUMS"]["ERROR"], error, "error");
+					}
+				},
+				"JSON"
+			);
+		});
+
+		(function() {
+			if (owner == "@/" + getCookie("id") || owner == "@/" + getCookie("username"))
+				$("#new-album-box").css("display", "block");
+			else
+				$("#new-album-box").css("display", "none");
+
+			$("#new-album").on("click", function() {
+				if ($(this).attr("data-state") == "collapsed") {
+					$(this).attr("data-state", "deployed");
+					this.reset();
+				}
+			});
+			$("#new-album h1").on("click", function(event) {
+				if ($(this).parent().attr("data-state") == "deployed") {
+					event.stopPropagation();
+					$(this).parent().attr("data-state", "collapsed");
+				}
+			});
+
+			$("#new-album").on("submit", function(event) {
+				event.preventDefault();
+				var $new_album_name = $("#new-album-name").removeClass("error"),
+				$new_album_description = $("#new-album-description").removeClass("error");
+
+				if ($new_album_name.val() === "") {
+					$new_album_name.addClass("error");
+					swal(DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["TITLE"], DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["NAME_IS_NOT_FILLED"], "error");
+					return false;
+				}
+				if ($new_album_name.val().length > 150) {
+					$new_album_name.addClass("error");
+					swal(DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["TITLE"], DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["NAME_IS_TOO_LONG"], "error");
+					return false;
+				}
+				if ($new_album_description.val().length > 1500) {
+					$new_album_description.addClass("error");
+					swal(DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["TITLE"], DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["DESCRIPTION_IS_TOO_LONG"]);
+					return false;
+				}
+
+				$.post("engine/new_album.php", 
+					{
+						name: $new_album_name.val(),
+						description: $new_album_description.val(),
+						access: $(".new-album-access:checked").val()
+					},
+					function(respond) {
+						if (respond["status"] === 0) {
+							$("#new-album").attr("data-state", "collapsed")[0].reset();
+							var $album = get_album(respond["name"], respond);
+							$("#albums").prepend($album);
+							$album.animate({ backgroundColor: "#AAF" }, 250, "swing")
+							.animate({ backgroundColor: "#FFE" }, 250, "swing")
+
+						} else {
+							var error;
+							switch (respond["status"]) {
+
+							}
+							swal(DICTIONARY["IMAGES"]["NEW_ALBUM"]["ERRORS"]["TITLE"], error, "error");
+						}
+					},
+					"JSON"
+				);
+			});
+
+			$("#new-album-name").on("keydown", function() {
+				if (this.value.length > 150)
+					this.className + " error";
+				else
+					this.classList.remove("error");
+			});
+			$("#new-album-description").on("keydown", function() {
+				if (this.value.length > 1500)
+					this.className + " error";
+				else
+					this.classList.remove("error");
+			});
+		}) ();
+
+	</script>
