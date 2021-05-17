@@ -12,6 +12,7 @@ const { compress, decompress } = require("express-compress");
 const indexRouter = require("./routes");
 const i18nRouter  = require("./routes/i18n");
 const imgRouter   = require("./routes/img");
+const cssRouter   = require("./routes/css");
 
 
 
@@ -39,6 +40,7 @@ class Server
         this.app.use("/",     indexRouter);
         this.app.use("/i18n", i18nRouter);
         this.app.use("/img",  imgRouter);
+        this.app.use("/css",  cssRouter);
 
         this.app.use((err, req, res, next) => {
             res

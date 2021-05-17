@@ -1,0 +1,182 @@
+@import "@/default.css" all;
+
+#header ul,
+#header ol,
+#container ul,
+#container ol {
+	margin-left: 1rem;
+}
+#container .image,
+#container .video {
+	float: left;
+	width: calc(33.333333% - 1rem);
+	height: 300px;
+	object-fit: cover;
+}
+
+#header {
+	margin-top: 3.4rem;
+	background-color: #F0F8FF;
+}
+#heading {
+	z-index: 1;
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 1rem .5rem;
+	font-family: Buttons;
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: center;
+	color: #7D80B8;
+	background-color: #F0F8FF;
+}
+#intro,
+#markup-demo,
+#stats {
+	z-index: 1;
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: .5rem;
+	font-family: Basic;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	background-color: #FFF;
+}
+
+#container {
+	margin-top: 0;
+	background-color: #F0F8FF;
+}
+#bg-image {
+	z-index: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/cirno.jpeg");
+	background-size: cover;
+	background-position: center;
+	filter: blur(8px);
+}
+
+.stats-intro,
+#index-auth-intro {
+	margin: .5rem auto;
+	font-family: Basic;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.stats-box,
+.treding-hashtag,
+.stats-weekly-top-box,
+.stats-top-box,
+.stats-extra-box {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	background-color: #F0F8FF;
+	border-bottom: 1px dotted #7D80B8;
+	overflow: hidden;
+}
+.stats {
+	float: right;
+	font-family: Mono;
+	font-weight: bold;
+	color: #080;
+}
+
+#stats-hashtag-list {
+	font-family: Basic;
+	font-size: 1rem;
+	background-color: #F0F8FF;
+}
+
+#index-auth {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	max-width: 1140px;
+	margin: 0 auto 1rem;
+	background-color: #FFF;
+}
+#index-auth-intro {
+	margin: .5rem;
+}
+#index-log-in,
+#index-sign-up {
+	display: block;
+	float: left;
+	width: calc(50% + 1.5rem);
+	padding: 0;
+	font-family: Buttons;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	text-transform: uppercase;
+	color: #FFF;
+	background: #7D80B8;
+	transition: all .2s ease 0s;
+}
+#index-log-in:hover,
+#index-log-in:focus,
+#index-sign-up:hover,
+#index-sign-up:focus {
+	color: #FFF07C;
+}
+#index-log-in:active,
+#index-sign-up:active {
+	transform: scaleX(1.2);
+}
+#index-log-in {
+	float: left;
+}
+#index-sign-up {
+	float: right;
+}
+#index-log-in:after,
+#index-sign-up:before {
+	content: "";
+	box-sizing: border-box;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	border: 1.5rem solid #FFF;
+}
+#index-log-in:after {
+	float: right;
+	border-left-color: #7D80B8;
+}
+#index-sign-up:before {
+	float: left;
+	border-right-color: #7D80B8;
+}
+
+footer {
+	z-index: 1;
+	position: relative;
+	background-color: #FFF;
+}
+
+@media screen and (max-width: 750px) {
+	#container .image,
+	#container .video {
+		height: 150px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.stats-box {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	#index-log-in,
+	#index-sign-up {
+		font-size: 1.2rem;
+	}
+}
+@media screen and (max-width: 320px) {
+	#index-log-in,
+	#index-sign-up {
+		font-size: 1rem;
+	}
+}
