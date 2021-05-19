@@ -46,6 +46,15 @@ CREATE TYPE public.audio_format AS ENUM (
 ALTER TYPE public.audio_format OWNER TO sodesu;
 
 
+CREATE TYPE public.entity_type AS ENUM (
+    'user',
+    'club'
+);
+
+
+ALTER TYPE public.entity_type OWNER TO sodesu;
+
+
 CREATE TYPE public.file_format AS ENUM (
     'css',
     'jpeg',
@@ -193,7 +202,8 @@ CREATE TABLE public.bans (
     id bigint NOT NULL,
     entity_id bigint NOT NULL,
     until_dt timestamp without time zone NOT NULL,
-    reason_id bigint NOT NULL
+    reason_id bigint NOT NULL,
+    banned_dt timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
 
@@ -398,8 +408,7 @@ CREATE TABLE public.media (
     id bigint NOT NULL,
     hash bigint NOT NULL,
     format public.file_format NOT NULL,
-    uploader_id bigint NOT NULL,
-    uploader_ip inet NOT NULL
+    uploader_id bigint NOT NULL
 );
 
 
@@ -418,32 +427,6 @@ ALTER TABLE public.media_id_seq OWNER TO sodesu;
 
 
 ALTER SEQUENCE public.media_id_seq OWNED BY public.media.id;
-
-
-
-CREATE TABLE public.media_requests (
-    id bigint NOT NULL,
-    media_id bigint NOT NULL,
-    ip inet NOT NULL,
-    datetime timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
-);
-
-
-ALTER TABLE public.media_requests OWNER TO sodesu;
-
-
-CREATE SEQUENCE public.media_requests_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.media_requests_id_seq OWNER TO sodesu;
-
-
-ALTER SEQUENCE public.media_requests_id_seq OWNED BY public.media_requests.id;
 
 
 
@@ -532,6 +515,86 @@ ALTER SEQUENCE public.playlists_id_seq OWNED BY public.playlists.id;
 
 
 
+CREATE TABLE public.poll_answers (
+    id bigint NOT NULL,
+    index smallint NOT NULL,
+    poll_id bigint NOT NULL,
+    text_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.poll_answers OWNER TO sodesu;
+
+
+CREATE SEQUENCE public.poll_answers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.poll_answers_id_seq OWNER TO sodesu;
+
+
+ALTER SEQUENCE public.poll_answers_id_seq OWNED BY public.poll_answers.id;
+
+
+
+CREATE TABLE public.poll_votes (
+    id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    answer_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.poll_votes OWNER TO sodesu;
+
+
+CREATE SEQUENCE public.poll_votes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.poll_votes_id_seq OWNER TO sodesu;
+
+
+ALTER SEQUENCE public.poll_votes_id_seq OWNED BY public.poll_votes.id;
+
+
+
+CREATE TABLE public.polls (
+    id bigint NOT NULL,
+    multiple_answers boolean DEFAULT false NOT NULL,
+    quiz boolean DEFAULT false NOT NULL,
+    voting_visibility public.access DEFAULT 'private'::public.access NOT NULL,
+    closing_dt timestamp without time zone,
+    corrent_answer_id bigint,
+    hint_id bigint
+);
+
+
+ALTER TABLE public.polls OWNER TO sodesu;
+
+
+CREATE SEQUENCE public.polls_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.polls_id_seq OWNER TO sodesu;
+
+
+ALTER SEQUENCE public.polls_id_seq OWNED BY public.polls.id;
+
+
+
 CREATE TABLE public.profile_links (
     id bigint NOT NULL,
     entity_id bigint NOT NULL,
@@ -581,6 +644,34 @@ ALTER TABLE public.prohibited_media_id_seq OWNER TO sodesu;
 
 
 ALTER SEQUENCE public.prohibited_media_id_seq OWNED BY public.prohibited_media.id;
+
+
+
+CREATE TABLE public.sessions (
+    id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    key character(36) NOT NULL,
+    ip inet NOT NULL,
+    auth_dt timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    useragent character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.sessions OWNER TO sodesu;
+
+
+CREATE SEQUENCE public.sessions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sessions_id_seq OWNER TO sodesu;
+
+
+ALTER SEQUENCE public.sessions_id_seq OWNED BY public.sessions.id;
 
 
 
@@ -745,10 +836,6 @@ ALTER TABLE ONLY public.media ALTER COLUMN id SET DEFAULT nextval('public.media_
 
 
 
-ALTER TABLE ONLY public.media_requests ALTER COLUMN id SET DEFAULT nextval('public.media_requests_id_seq'::regclass);
-
-
-
 ALTER TABLE ONLY public.music ALTER COLUMN id SET DEFAULT nextval('public.music_id_seq'::regclass);
 
 
@@ -761,11 +848,27 @@ ALTER TABLE ONLY public.playlists ALTER COLUMN id SET DEFAULT nextval('public.pl
 
 
 
+ALTER TABLE ONLY public.poll_answers ALTER COLUMN id SET DEFAULT nextval('public.poll_answers_id_seq'::regclass);
+
+
+
+ALTER TABLE ONLY public.poll_votes ALTER COLUMN id SET DEFAULT nextval('public.poll_votes_id_seq'::regclass);
+
+
+
+ALTER TABLE ONLY public.polls ALTER COLUMN id SET DEFAULT nextval('public.polls_id_seq'::regclass);
+
+
+
 ALTER TABLE ONLY public.profile_links ALTER COLUMN id SET DEFAULT nextval('public.profile_links_id_seq'::regclass);
 
 
 
 ALTER TABLE ONLY public.prohibited_media ALTER COLUMN id SET DEFAULT nextval('public.prohibited_media_id_seq'::regclass);
+
+
+
+ALTER TABLE ONLY public.sessions ALTER COLUMN id SET DEFAULT nextval('public.sessions_id_seq'::regclass);
 
 
 
@@ -841,11 +944,6 @@ ALTER TABLE ONLY public.media
 
 
 
-ALTER TABLE ONLY public.media_requests
-    ADD CONSTRAINT media_requests_pk PRIMARY KEY (id);
-
-
-
 ALTER TABLE ONLY public.music
     ADD CONSTRAINT music_pk PRIMARY KEY (id);
 
@@ -861,6 +959,21 @@ ALTER TABLE ONLY public.playlists
 
 
 
+ALTER TABLE ONLY public.poll_answers
+    ADD CONSTRAINT poll_answers_pk PRIMARY KEY (id);
+
+
+
+ALTER TABLE ONLY public.poll_votes
+    ADD CONSTRAINT poll_votes_pk PRIMARY KEY (id);
+
+
+
+ALTER TABLE ONLY public.polls
+    ADD CONSTRAINT polls_pk PRIMARY KEY (id);
+
+
+
 ALTER TABLE ONLY public.profile_links
     ADD CONSTRAINT profile_links_pk PRIMARY KEY (id);
 
@@ -868,6 +981,11 @@ ALTER TABLE ONLY public.profile_links
 
 ALTER TABLE ONLY public.prohibited_media
     ADD CONSTRAINT prohibited_content_pk PRIMARY KEY (id);
+
+
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT sessions_pk PRIMARY KEY (id);
 
 
 
@@ -919,6 +1037,10 @@ CREATE INDEX artifacts_type_index ON public.artifacts USING btree (type);
 
 
 
+CREATE INDEX bans_banned_dt_index ON public.bans USING btree (banned_dt);
+
+
+
 CREATE INDEX bans_until_dt_index ON public.bans USING btree (until_dt);
 
 
@@ -963,18 +1085,6 @@ CREATE UNIQUE INDEX media_hash_uindex ON public.media USING btree (hash);
 
 
 
-CREATE INDEX media_requests_datetime_index ON public.media_requests USING btree (datetime);
-
-
-
-CREATE INDEX media_requests_ip_index ON public.media_requests USING btree (ip);
-
-
-
-CREATE INDEX media_uploader_ip_index ON public.media USING btree (uploader_ip);
-
-
-
 CREATE INDEX music_artist_index ON public.music USING btree (artist);
 
 
@@ -1003,6 +1113,26 @@ CREATE INDEX playlists_visibility_index ON public.playlists USING btree (visibil
 
 
 
+CREATE INDEX poll_answers_index_index ON public.poll_answers USING btree (index);
+
+
+
+CREATE INDEX polls_closing_dt_index ON public.polls USING btree (closing_dt);
+
+
+
+CREATE INDEX polls_multiple_answers_index ON public.polls USING btree (multiple_answers);
+
+
+
+CREATE INDEX polls_quiz_index ON public.polls USING btree (quiz);
+
+
+
+CREATE INDEX polls_voting_visibility_index ON public.polls USING btree (voting_visibility);
+
+
+
 CREATE INDEX profile_links_label_index ON public.profile_links USING btree (label);
 
 
@@ -1016,6 +1146,22 @@ CREATE UNIQUE INDEX prohibited_content_id_uindex ON public.prohibited_media USIN
 
 
 CREATE INDEX prohibited_content_type_index ON public.prohibited_media USING btree (type);
+
+
+
+CREATE INDEX sessions_auth_dt_index ON public.sessions USING btree (auth_dt);
+
+
+
+CREATE INDEX sessions_ip_index ON public.sessions USING btree (ip);
+
+
+
+CREATE INDEX sessions_key_index ON public.sessions USING btree (key);
+
+
+
+CREATE INDEX sessions_useragent_index ON public.sessions USING btree (useragent);
 
 
 
@@ -1185,11 +1331,6 @@ ALTER TABLE ONLY public.images
 
 
 
-ALTER TABLE ONLY public.media_requests
-    ADD CONSTRAINT media_requests_media_id_fk FOREIGN KEY (media_id) REFERENCES public.media(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
-
 ALTER TABLE ONLY public.media
     ADD CONSTRAINT media_users_id_fk FOREIGN KEY (uploader_id) REFERENCES public.users(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
@@ -1240,6 +1381,36 @@ ALTER TABLE ONLY public.playlists
 
 
 
+ALTER TABLE ONLY public.poll_answers
+    ADD CONSTRAINT poll_answers_content_id_fk FOREIGN KEY (text_id) REFERENCES public.content(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.poll_answers
+    ADD CONSTRAINT poll_answers_polls_id_fk FOREIGN KEY (poll_id) REFERENCES public.polls(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.poll_votes
+    ADD CONSTRAINT poll_votes_poll_answers_id_fk FOREIGN KEY (answer_id) REFERENCES public.poll_answers(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.poll_votes
+    ADD CONSTRAINT poll_votes_users_id_fk FOREIGN KEY (user_id) REFERENCES public.users(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.polls
+    ADD CONSTRAINT polls_content_id_fk FOREIGN KEY (hint_id) REFERENCES public.content(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.polls
+    ADD CONSTRAINT polls_poll_answers_id_fk FOREIGN KEY (corrent_answer_id) REFERENCES public.poll_answers(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
 ALTER TABLE ONLY public.profile_links
     ADD CONSTRAINT profile_links_artifacts_id_fk FOREIGN KEY (artifact_id) REFERENCES public.artifacts(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
@@ -1247,6 +1418,11 @@ ALTER TABLE ONLY public.profile_links
 
 ALTER TABLE ONLY public.profile_links
     ADD CONSTRAINT profile_links_entities_id_fk FOREIGN KEY (entity_id) REFERENCES public.entities(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT sessions_users_id_fk FOREIGN KEY (user_id) REFERENCES public.users(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 
