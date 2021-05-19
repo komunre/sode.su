@@ -12,17 +12,17 @@ rl.init();
 rl.setCompletion(["stop", "reload"]);
 rl.setPrompt("> ");
 
-rl.on("line", line => {
+rl.on("line", async line => {
     console.log(line);
 
     const command = line.trim();
 
     switch (command) {
         case 'stop':
-            server.stop();
+            await server.stop();
         break;
         case 'reload':
-            server.reload();
+            await server.reload();
         break;
     }
 });

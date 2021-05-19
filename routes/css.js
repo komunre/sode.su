@@ -7,7 +7,7 @@ router.use((req, res, next) => {
     next();
 });
 
-router.get("/*.css", async (req, res, next) => {
+router.get("/:name.css", async (req, res, next) => {
     res
         .type(".css")
         .sendFile(path.resolve(`public/css${req.path}`), err => {
@@ -19,7 +19,7 @@ router.get("/*.css", async (req, res, next) => {
 
 router.get("/fonts/*.ttf", async (req, res, next) => {
     res
-        .type(".ttf")
+        .type(":name.ttf")
         .sendFile(path.resolve(`public/css${req.path}`), err => {
             if (err) {
                 next(404);

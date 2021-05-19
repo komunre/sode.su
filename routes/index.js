@@ -2,6 +2,8 @@ const path    = require("path");
 const express = require("express");
 const router  = express.Router();
 
+const api = require("../api");
+
 router.use((req, res, next) => {
     res.set("Cache-Control", "public, max-age=3600");
     next();
@@ -16,7 +18,7 @@ router.get("/robots.txt", async (req, res) => {
 router.get("/api.json", async (req, res) => {
     return res
         .type(".json")
-        .sendFile(path.resolve("public/api.json"));
+        .json(api);
 });
 
 router.get("/emoji.json", async (req, res) => {

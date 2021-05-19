@@ -7,10 +7,10 @@ router.use((req, res, next) => {
     next();
 });
 
-router.get("/*.json", async (req, res, next) => {
+router.get("/*.html", (req, res, next) => {
     res
-        .type(".json")
-        .sendFile(path.resolve(`public/i18n${req.path}`), err => {
+        .type(".html")
+        .sendFile(path.resolve(`public/html${req.path}`), err => {
             if (err) {
                 next(404);
             }
