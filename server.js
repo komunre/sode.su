@@ -16,8 +16,10 @@ const cssRouter   = require("./routes/css");
 const htmlRouter  = require("./routes/html");
 const jsRouter    = require("./routes/js");
 
-const db  = require("./db");
-const api = require("./api");
+const db    = require("./db");
+const api   = require("./api");
+const i18n  = require("./i18n");
+const cache = require("./cache");
 
 
 
@@ -41,16 +43,24 @@ class Server
         this.app.use(express.urlencoded({ extended: true }));
 
         this.app.use((req, res, next) => {
+            res.locals.clientLang = req.query["lang"] || req.cookies["lang"];
+
+            if (!i18n[res.locals.clientLang]){
+                res.locals.clientLang = "eng";
+            }
+
             res.set("Server", "Desu");
+            res.set("X-API-Version", "0");
+
             next();
         });
 
-        this.app.use("/",     indexRouter);
         this.app.use("/i18n", i18nRouter);
         this.app.use("/img",  imgRouter);
         this.app.use("/css",  cssRouter);
         this.app.use("/html", htmlRouter);
         this.app.use("/js",   jsRouter);
+        this.app.use("/",     indexRouter);
 
         this.app.use((err, req, res, next) => {
             res
@@ -62,8 +72,8 @@ class Server
 
         if (this.port == 443) {
             this.server = https.createServer({
-                    key:  fs.readFileSync(process.env.CERT_KEY),
-                    cert: fs.readFileSync(process.env.CERT_CHAIN)
+                    key:  fs.readFileSync(process.env.CERT_KEY).toString(),
+                    cert: fs.readFileSync(process.env.CERT_CHAIN).toString()
                 },
                 this.app
             );
@@ -95,7 +105,10 @@ class Server
     async reload()
     {
         console.log("Reload the server...");
+
+        cache.load();
         await this.db.restart();
+
         console.log("Server reloaded.");
     }
 }

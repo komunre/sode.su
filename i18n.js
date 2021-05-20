@@ -1,5 +1,5 @@
-{
-	"eng": {
+module.exports = {
+	eng: {
 		"META": {
 			"LANG": "en",
 			"SEPARATOR": ", ",
@@ -27,7 +27,7 @@
 			}
 		}
 	},
-	"rus": {
+	rus: {
 		"META": {
 			"LANG": "ru",
 			"SEPARATOR": ", ",
@@ -55,4 +55,5 @@
 			}
 		}
 	}
-}
+};
+

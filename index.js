@@ -5,7 +5,7 @@ const Server = require("./server");
 process.stdin.setEncoding("utf8");
 process.stderr.setEncoding("utf8");
 
-const PORT   = process.env.PORT || 443;
+const PORT   = process.env.PORT || 3000;
 const server = new Server(PORT);
 
 rl.init();
