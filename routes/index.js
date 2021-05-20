@@ -1,7 +1,7 @@
-const path       = require("path");
-const fs         = require("fs");
-const express    = require("express");
-const router     = express.Router();
+const path    = require("path");
+const fs      = require("fs");
+const express = require("express");
+const router  = express.Router();
 
 const api   = require("../api");
 const i18n  = require("../i18n");
@@ -53,12 +53,12 @@ router.get("/", async (req, res) => {
         .set("Cache-Control", "public, max-age=0")
         .type(".html")
         .send(cache.page({
-            lang:      res.locals.clientLang,
-            descr:     i18n[res.locals.clientLang].INDEX.DESCR,
-            url:       `${api.HOST}/`,
+            lang:      i18n[res.locals.clientLang].meta.lang,
+            descr:     i18n[res.locals.clientLang].index.descr,
+            url:       `${api.host}/`,
             css:       "css/index.css",
-            canonical: `${api.HOST}/`,
-            title:     i18n[res.locals.clientLang].INDEX.TITLE,
+            canonical: `${api.host}/`,
+            title:     i18n[res.locals.clientLang].index.title,
             type:      "website"
         }));
 });

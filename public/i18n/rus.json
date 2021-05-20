@@ -1,754 +1,260 @@
 {
-	"META": {
-		"LANG": "ru",
-		"SEPARATOR": ", "
+	"time": {
+		"forever": "foverer",
+		"today": "today at {{TIME}}",
+		"yesterday": "yesterday at {{TIME}}",
+		"tomorrow": "tomorrow at {{TIME}}"
 	},
-	"TIME": {
-		"FOREVER": "навсегда",
-		"TODAY": "сегодня в ",
-		"YESTERDAY": "вчера в ",
-		"TOMORROW": "завтра в "
+	"langs": {
+		"epo": "Esperanto",
+		"eng": "English",
+		"rus": "Russian",
+		"mol": "Moldavian",
+		"ukr": "Ukrainian",
+		"nih": "Japanese",
+		"zho": "Chinese",
+		"esp": "Spanish",
+		"fra": "French",
+		"deu": "Deutch",
+		"ara": "Arabish",
+		"hin": "Hindi",
+		"ben": "Bengali",
+		"por": "Portuguese",
+		"han": "Korean",
+		"ita": "Italian",
+		"vie": "Vietnamese",
+		"ind": "Indonesian",
+		"tur": "Turkish",
+		"pol": "Polish",
+		"fas": "Farsi",
+		"nld": "Dutch",
+		"swe": "Swedish",
+		"bel": "Belorussian",
+		"ron": "Romanian"
 	},
-	"LOCATIONS": {
-		"Earth": "Земля",
-		"Europe": "Европа",
-		"Asia": "Азия",
-		"Eurasia": "Евразия",
-		"Africa": "Африка",
-		"North America": "Северная Америка",
-		"South America": "Южная Америка",
-		"America": "Америка",
-		"Australia": "Австралия",
-		"Oceania": "Океания",
-		"Antarctica": "Антарктида",
-		"PMR": "ПМР",
-		"Moldova": "Молдова",
-		"Ukraine": "Украина",
-		"Belarus": "Беларусь",
-		"Russia": "Россия",
-		"Nihon": "Япония",
-		"EU": "Европейский Союз"
+	"preloader": "Loading...",
+	"topnav": {
+		"home": "Home",
+		"friends": "Friends",
+		"feed": "Feed",
+		"feedback": "Feedback",
+		"clubs": "Clubs",
+		"media": "Media",
+		"images": "Images",
+		"videos": "Videos",
+		"music": "Music",
+		"lang": "Language",
+		"log_in": "Log in"
 	},
-	"LANGUAGES": {
-		"epo": "Эсперанто",
-		"rus": "Русский",
-		"eng": "Английский",
-		"mol": "Молдавский",
-		"ukr": "Украинский",
-		"bel": "Белорусский",
-		"nih": "Японский",
-		"zho": "Китайский",
-		"esp": "Испанский",
-		"fra": "Французский",
-		"deu": "Немецкий",
-		"ara": "Арабский",
-		"hin": "Хинди",
-		"ben": "Бенгальский",
-		"por": "Португальский",
-		"han": "Корейский",
-		"ita": "Итальянский",
-		"vie": "Вьетнамский",
-		"ind": "Индонезийский",
-		"tur": "Турецкий",
-		"pol": "Польский",
-		"fas": "Фарси",
-		"nld": "Нидерландский",
-		"swe": "Шведский",
-		"ron": "Румынский"
+	"menu": {
+		"home": "Home",
+		"friends": "Friends",
+		"feed": "Feed",
+		"feedback": "Feedback",
+		"clubs": "Clubs",
+		"images": "Images",
+		"videos": "Videos",
+		"music": "Music"
 	},
-	"PRELOADER": "Загрузка...",
-	"TOPNAV": {
-		"HOME": "Домой",
-		"FRIENDS": "Друзья",
-		"CHATS": "Чаты",
-		"FEED": "Лента",
-		"FEEDBACK": "Ответы",
-		"CLUBS": "Клубы",
-		"MEDIA": "Медиа",
-		"IMAGES": "Изображения",
-		"VIDEOS": "Видео",
-		"MUSIC": "Музыка",
-		"HELP": "Помощь",
-		"LANGUAGE": "Язык",
-		"LOG_IN": "Войти",
-		"SIGN_UP": "Зарегистрироваться"
+	"self_menu": {
+		"home": "My homepage",
+		"settings": "Settings",
+		"themes": "Design themes",
+		"bookmarks": "Bookmarks",
+		"stickers": "Stickers",
+		"polls": "Polls",
+		"moderation": "Moderation",
+		"log_out": "Log out",
+		"lang": "Language"
 	},
-	"MENU": {
-		"HOME": "Домой",
-		"FRIENDS": "Друзья",
-		"CHATS": "Чаты",
-		"FEED": "Лента",
-		"FEEDBACK": "Ответы",
-		"CLUBS": "Клубы",
-		"IMAGES": "Изображения",
-		"VIDEOS": "Видео",
-		"MUSIC": "Музыка",
-		"HELP": "Помощь"
-	},
-	"SELF_MENU": {
-		"HOMEPAGE": "Моя страница",
-		"EDIT_PROFILE": "Редактировать профиль",
-		"THEMES": "Темы оформления",
-		"BOOKMARKS": "Закладки",
-		"STICKERS": "Стикеры",
-		"POLLS": "Опросы",
-		"ACCOUNT": "Аккаунт",
-		"MODERATION": "Модерация",
-		"LOG_OUT": "Выйти",
-		"HELP": "Помощь",
-		"LANGUAGE": "Язык"
-	},
-	"COPYRIGHT": "Sode.su © 2019-2020",
-	"INDEX": {
-		"TITLE": "sode.su – антисоциальная сеть",
-		"HEADING": "Добро пожаловать в анонимную социальную сеть",
-		"INTRO": "Пинайте меня в телегу в общем <a href='https://t.me/arelive'>@arelive</a>, чтоб я побыстрее допиливал эту ерунду.<hr />Sode.su (そうです) – скорее не соцсеть, а антисоцсеть. Здесь никому не важны твои возраст и гендер. В твоём профиле всего три заготовленных поля: локация (страна, штат), языки и вебсайт для автонастройки ботов. Никаких источников вдохновения, никаких отношений к алкоголю, курению и анальному сексу. Вместо заполнения профиля под копирку тебе даётся другой инструмент: мощный язык разметки. Можешь вешать <a href='https://sode.su'>ссылки</a> на любую часть текста, вставлять изображения, видео и музыку в любое место, выделять слова <i>курсивом</i>, <u>подчёркивать</u>, закрывать <mark>спойлерами</mark> и делать много других извращений. И не только в профиле, эта разметка доступна везде: в записях, комментариях, сообщениях... Хочешь ещё больше? Напиши для своей страницы собственную таблицу стилей, и дизайн твоего профиля преобразится для всех заходящих. Как и в любой соцсети, ты можешь завести здесь друзей. Только вот понтоваться ими ты не сможешь, – они все скрыты. Выбирай друзей с умом, а не для галочки. Число участников групп и пабликов также скрыто, а под их записями кроме лайков есть дизлайки. Авторы и тех и других не отображаются, известен только рейтинг. Что-то не нравится? Готов поспорить, что главное в интернете – одобрение звёзд, и цена каждого высказывания определяется авторитетом автора? Тогда смело разворачивайся и тащи отсюда свою упругую задницу, потому как здесь есть возможность вообще не подписываться под своими записями и комментариями, а оставлять их анонимно, от лица особого пользователя – <a href='@0'>Анонима</a>. Более того, Аноним доступен даже для незарегистрированных посетителей. Регистрация, конечно, даёт некоторые преимущества: свой профиль и стену, сообщения, друзей, но можно в полной мере пользоваться sode.su как имиджбордом и без регистрации. Если заинтересовало, предлагаем ознакомиться поподробнее с разметкой, имя которой – Simple Markup (SMU). Можешь по приколу называть её Super Markup.",
-		"MARKUP": "<hr /> <h1># Заголовок</h1> <h2>## Заголовок<h2> <h3>### Заголовок</h3> <p><span class='reply'>&gt;&gt;123</span> (сноска, ответ)</p> <blockquote>&gt; цитата (пробел после &gt; обязателен)</blockquote> <br /> <p>*[<b>Полужирный</b>]* <br />%[<i>Курсив</i>]%<br /> _[<ins>Подчёркнутый</ins>]_<br /> ^[<span class='overline'>Надчёркнутый</span>]^<br /> ~[<del>Зачёркнутый</del>]~<br /> +[<sup>Надстрочный</sup>]+<br /> &[<sub>Подстрочный</sub>]&<br /> `[<tt>Моноширинный</tt>]`<br /> =[<mark>Спойлер</mark>]=<br /> <br /> [[сслыка на картинку] необязательная подпись]<br /> [{ссылка на видео} необязательная ссылка на постер]<br /> {[сслыка на трек] необязательное название}<br /> {{<a href='https://sode.su'>https://sode.su</a>}} (прямая ссылка)<br /> {{https://sode.su} другой текст ссылки}</p> <br /> <ul><li>- элемент маркированного списка</li> <li>- ещё один элемент</li></ul> <br /> <ul style='list-style: none;'><li>0. элемент нумерованного списка, 0 превратится в 1</li> <li>0. ещё один элемент, 0 превратится в 2</li></ul> <br /> <p>--- (горизонтальная линия)</p> <hr />",
-		"STATS": {
-			"COUNT": {
-				"INTRO": "Скоро ты сам попробуешь эти скобочки и дефисы. Кроме того, есть обычные упоминания пользователей (<span class='mention username'>@username</span>) и клубов (<span class='mention clubname'>~clubname</span>), а также <span class='hashtag'>#хэштеги</span>. Клубами здесь называются все разновидности групп: паблики, доски и просто приватные загоны. На самом деле, подобные псевдонимы для упоминаний и адресной строки (типа <span class='mention username'>@username</span>) просто так занять нельзя. Допустим, возьмёт себе кто-то юзернейм <span class='mention username'>@putin</span>, а потом к соцсети присоединится настоящий putin и будет долго дёргать нас за яички. В данной ситуации мы бы конечно приняли решение в пользу анонима, нежели какого-то ВВП, но вот если кто-то ещё создаст клуб <span class='mention clubname'>~apple</span>, а потом заявится настоящий гендиректор Apple Inc, будет неудобно. Будем честны, мы не очень охотно раздаём такие псевдонимы. Но зато каждому даём числовой идентификатор. Вот, например, профиль Анонима: <span class='mention username'>@0</span>, а вот профиль создателя сего курятника: <span class='mention username'>@1</span>. Другие пользователи, конечно, имеют числа побольше и не такие красивые, но не стоит зацикливаться на их красоте. Твоё число – родное, и для тебя оно самое красивое. Даже лучше, если в нём будет побольше энтропии, это подчёркивает твою индивидуальность. <br /> З.Ы. Хотя, знаешь, я передумал. Забирай свой любимый юзернейм, но помни, что я оставляю за собой право однажды отобрать его у тебя. <br /> Теперь давай поглядим, сколько анонимов уже присоединились к нам до тебя и сколько контента они создали.",
-				"USERS": "Всего пользователей: ",
-				"CLUBS": "Всего клубов: ",
-				"CLUB_MEMBERS": "Всего участников всех клубов: ",
-				"POSTS": "Всего записей (постов): ",
-				"POST_COMMENTS": "Всего комментариев под всеми записями: ",
-				"CONFAS": "Всего групповых чатов (конф): ",
-				"MESSAGES": "Всего сообщений: ",
-				"CONFA_MEMBERS": "Всего участников всех конф: ",
-				"VOICE_STOCK": "Всего набранных голосовых (общий сток): ",
-				"IMAGES": "Всего оригинальных изображений (пикч): ",
-				"VIDEOS": "Всего оригинальных видео: ",
-				"TRACKS": "Всего оригинальных треков (музыки): ",
-				"THEMES": "Всего оригинальных тем оформления (стилей): ",
-				"FONTS": "Всего оригинальных шрифтов: ",
-				"STICKERS": "Всего оригинальных стикеров: ",
-				"STICKERPACKS": "Всего стикерпаков: ",
-				"POLLS": "Всего опросов: ",
-				"VOICES": "Всего голосовых сообщений: ",
-				"SCHEDULED_POSTS": "Всего запланированных записей: ",
-				"SCHEDULED_MESSAGES": "Всего запланированных сообщений: "
+	"copyright": "Sode.su © 2019-2021",
+	"index": {
+		"title": "sode.su – an antisocial network",
+		"heading": "Welcome to anonymous antisocial network",
+		"intro": "Sode.su (そうです) is an antisocial rather than social network. Nobody cares about your age or gender here. There are only three prepared fields in your profile for auto-configuration bots: location, languages ​​and website. No sources of inspiration, no attitude to alcohol, smoking and anal sex. Instead of filling out a carbon copy profile, you are given another tool: a powerful markup language. You can embed <a href='https://sode.su'>links</a> into any part of the text, insert images, videos and music anywhere, <i>italicize</i> words, <ins>underline</ins>, cover with <mark>spoilers</mark> and do a lot of other perversions. Not only in the profile, this markup is available everywhere: in posts, comments, messages... Want more? Write your own style sheet for your page, and your profile design will be transformed for everyone who visits it. As with any social network, you can make friends here. Only now you cannot show off them, they are all hidden. Choose your friends wisely, not just for show. The number of members of every group is also hidden, and under its posts, in addition to likes, there are dislikes. Authors of both are not displayed, only the rating is known. Dont like something? Do you bet that the main thing on the internet is the approval of the celebrities, and the price of each statement is determined by the authority of the author? Then boldly turn around and drag your elastic ass out of here, because here there is an opportunity not to sign your posts and comments at all, but to leave them anonymously, on behalf of a special user – <a href='@0'>Anonym</a>. Moreover, Anonym is available even for unregistered visitors. Registration, of course, gives you some advantages: your own profile and wall, messages, friends, but you can use sode.su fully as an imageboard without registration. If you are interested, we suggest that you familiarize yourself with the markup in more detail, the name of which is Simple Markup (SMU). You can call it Super Markup for fun.",
+		"layout": "<hr /> <h1># Heading</h1> <h2>## Heading<h2> <h3>### Heading</h3> <p><span class='reply'>&gt;&gt;123</span> (reply)</p> <blockquote>&gt; quote (the space after &gt; is required)</blockquote> <br /> <p>*[<b>Bold</b>]* <br />%[<i>Italic</i>]%<br /> _[<ins>Underline</ins>]_<br /> ^[<span class='overline'>Overline</span>]^<br /> ~[<del>Strikethrough</del>]~<br /> +[<sup>Superscript</sup>]+<br /> &[<sub>Subscript</sub>]&<br /> `[<tt>Monospase</tt>]`<br /> =[<mark>Spoiler</mark>]=<br /> <br /> [[link to the image] optional alt]<br /> [{link to the video} optional link to the poster]<br /> {[link to the track] optional title}<br /> {{<a href='https://sode.su'>https://sode.su</a>}} (direct link)<br /> {{https://sode.su} different link text}</p> <br /> <ul><li>- item of unordered list</li> <li>- another item</li></ul> <br /> <ul style='list-style: none;'><li>0. item of ordered list, 0 will turn into 1</li> <li>0. another item, 0 will turn into 2</li></ul> <br /> <p>--- (horizontal rule)</p> <hr />",
+		"stats": {
+			"count": {
+				"intro": "You will soon try these brackets and hyphens yourself. In addition, there are ubiquitous mentions of users (<span class='mention username'>@username</span>) and clubs (<span class='mention clubname'>~clubname</span>), and <span class='hashtag'>#hashtags</span>. All types of groups are called clubs here: publics, boards and just private corrals. In fact, such aliases for mentions and the address bar (such as <span class='mention username'>@username</span>) simply cannot be taken. Let's say someone takes the username <span class='mention username'>@putin</span>, and then the real putin joins the social network and will pull us on the testicles for a long time. In this situation, of course, we would have made a decision in favor of an anonym rather than some kind of president, but if someone else creates a club <span class='mention clubname'>~apple</span>, and then the real CEO of Apple Inc will appear, it is will be inconvenient. Let's be honest, we are not very willing to issue such nicknames, but we give everyone a numeric identifier. For example, Anonym's profile: <span class='mention username'>@0</span>, and the profile of the creator of this chicken coop: <span class='mention username'>@1</span>. Other users, of course, have longer numbers and not so pretty, but you should not dwell on their beauty. Your number is native, and for you, it is the most beautiful. It is even better if there is more entropy in it, it emphasizes your individuality. Although, you know, I changed my mind. Take your favorite username, but remember that I reserve the right to take it back from you one day. <br /> Now look how many anonyms have already joined us before you and how much content they have created.",
+				"users": "Total users: ",
+				"clubs": "Total clubs: ",
+				"club_members": "Total members of all clubs: ",
+				"posts": "Total posts: ",
+				"post_comments": "Total comments to all posts: ",
+				"confas": "Total group chats (confas): ",
+				"messages": "Total messages: ",
+				"confa_members": "Total members of all confas: ",
+				"voice_stock": "Total grinded voices (a joint stock): ",
+				"images": "Total original images: ",
+				"videos": "Total original videos: ",
+				"music": "Total original tracks (of music): ",
+				"themes": "Total original themes: ",
+				"fonts": "Total original fonts: ",
+				"stickers": "Total original stickers: ",
+				"stickerpacks": "Total stickerpacks: ",
+				"polls": "Total polls: ",
+				"voices": "Total voice messages: ",
+				"scheduled_posts": "Total scheduled posts: ",
+				"scheduled_messages": "Total scheduled messages: "
 			},
-			"AVG": {
-				"INTRO": "Как видишь, sode.su уже добилась неплохих показателей и продолжает развиваться. Датой рождения соцсетки считается 27 апреля 2019 года. Всего за первый год она достигла более 0 миллионов новых пользователей. А теперь взглянем на средние значения.",
-				"FRIENDS": "Среднее число друзей у одного пользователя: ",
-				"CLUB_MEMBERS": "Среднее число участников в одном клубе: ",
-				"WALL_POSTS": "Среднее число постов на одной стене: ",
-				"PRIVATE_MESSAGES": "Среднее число сообщений в приватном чате: ",
-				"CONFA_MESSAGES": "Среднее число сообщений в конфе: ",
-				"STICKERPACK_STICKERS": "Среднее число стикеров в стикерпаке: ",
-				"POST_COMMENTS": "Среднее число комментариев под одним постом: ",
-				"IMAGE_COMMENTS": "Среднее число комментариев к одной пикче: ",
-				"VIDEO_COMMENTS": "Среднее число комментариев к одному видео: ",
-				"THEME_COMMENTS": "Среднее число комментариев к одному стилю: ",
-				"FONT_COMMENTS": "Среднее число комментариев к одному шрифту: ",
-				"POST_RATING": "Средний рейтинг поста: ",
-				"IMAGE_RATING": "Средний рейтинг пикчи: ",
-				"VIDEO_RATING": "Средний рейтинг видео: ",
-				"THEME_RATING": "Средняя оценка стиля: ",
-				"FONT_RATING": "Средняя оценка шрифта: "
+			"average": {
+				"intro": "As you can see, sode.su has already achieved excellent results and continues to develop. The date of birth of the social network is April 27, 2019. In just the first year, it reached over 0 million new users. Now let's take a look at the average values.",
+				"friends": "Average # of friends one user has: ",
+				"wall_posts": "Average # of posts on one wall: ",
+				"private_messages": "Average # of messages in one private chat: ",
+				"confa_messages": "Average # of messages in one confa: ",
+				"sitckerpack_stickers": "Average # of stickers in one stickerpack: ",
+				"club_members": "Average # of members in one club: ",
+				"post_comments": "Average # of comments to one post: ",
+				"image_comments": "Average # of comments to one image: ",
+				"video_comments": "Average # of comments to one video: ",
+				"theme_comments": "Average # of comments to one theme: ",
+				"font_comments": "Average # of comments to one font: ",
+				"post_rating": "Average post rating: ",
+				"image_rating": "Average image rating: ",
+				"video_rating": "Average video rating: ",
+				"theme_rating": "Average theme rating: ",
+				"font_rating": "Average font rating: "
 			},
-			"HASHTAGS": {
-				"INTRO": "Честно говоря, мы бы хотели добавить сюда ещё статистики. Если у тебя есть идеи, присылай предложения на почту <a href='mailto:feedback@sode.su'>feedback@sode.su</a>. Помнишь, что здесь есть хэштеги? Мы не против трендов и тоже ведём сводку популярных тегов за последнюю неделю. Вот 15 самых-самых."
+			"hashtags": {
+				"intro": "To be honest, we would like to add more statistics here. If you have any ideas, send your suggestions to <a href='mailto:feedback@sode.su'>feedback@sode.su</a>. Remember there are hashtags here? We are not against trends, and we also keep a summary of popular tags for the last week. Here are 15 of the best."
 			},
-			"WEEKLY_TOP": {
-				"INTRO": "Если ты внимательно считал хэштеги и уловил нас в недоборе, это просто означает, что хэштегов за последнюю неделю набралось менее 15. Учитывая сумашедшую популярность sode.su, ты мог даже вообще ничего не увидеть в трендах, просто за одной текстовой прокладкой идёт другая без всякой полезной информации между ними. Это значит, тебе срочно нужно зайти в какой-нибудь клуб и написать пост со смыслом и парой хэштегов. Только не пиши всякий треш про члены и анусы. Если нет идей, пусть лучше трендовые хэштеги останутся пустыми. Скоро придёт другой аноним, которому есть что сказать. А пока давай рассмотрим последнюю часть статистики – самый популярный контент из всех разделов <strong>за последнюю неделю</strong>.",
-				"REPOSTS": {
-					"INTRO": "3 самых репостируемых поста:"
+			"weekly_top": {
+				"intro": "If you carefully counted the hashtags and caught us in an undercount, it simply means that there were less than 15 hashtags in the last week. Considering the crazy popularity of sode.su, you might not even see anything in the trends at all, it is just that one text pad is followed by another without any useful information between them. That means that you urgently need to go to some club and write a post with a meaning and a couple of hashtags. Just do not write any trash about the cocks and anuses. If there are no ideas, it is better to leave trending hashtags empty. Another anonymous person will come soon with something to say. For now, let's take a look at the last piece of statistics – the most popular content of all sections <strong>for the last week</strong>.",
+				"reposts": {
+					"intro": "3 most reposted posts:"
 				},
-				"POST_RATINGS": {
-					"INTRO": "3 самых рейтинговых поста (по лайкам и дизлайкам):"
+				"post_ratings": {
+					"intro": "3 most rated posts (by likes and dislikes):"
 				},
-				"IMAGE_RATINGS": {
-					"INTRO": "3 самых рейтинговых пикчи:"
+				"image_ratings": {
+					"intro": "3 most rated images:"
 				},
-				"VIDEO_RATINGS": {
-					"INTRO": "3 самых рейтинговых видео:"
+				"video_ratings": {
+					"intro": "3 most rated videos:"
 				},
-				"VIDEO_VIEWS": {
-					"INTRO": "3 самых просматриваемых видео:"
+				"video_views": {
+					"intro": "3 most viewed videos:"
 				},
-				"MUSIC_LISTENING": {
-					"INTRO": "3 самых слушаемых трека:"
+				"music_listening": {
+					"intro": "3 most listened tracks:"
 				},
-				"POST_COMMENTS": {
-					"INTRO": "3 самых комментируемых поста:"
+				"post_comments": {
+					"intro": "3 most commented posts:"
 				},
-				"IMAGE_COMMENTS": {
-					"INTRO": "3 самых комментируемых пикчи:"
+				"image_comments": {
+					"intro": "3 most commented images:"
 				},
-				"VIDEO_COMMENTS": {
-					"INTRO": "3 самых комментируемых видео:"
+				"video_comments": {
+					"intro": "3 most commented videos:"
 				},
-				"IMAGE_SAVINGS": {
-					"INTRO": "3 самых сохраняемых пикчи:"
+				"image_savings": {
+					"intro": "3 most saved images:"
 				},
-				"VIDEO_SAVINGS": {
-					"INTRO": "3 самых сохраняемых видео:"
+				"video_savings": {
+					"intro": "3 most saved videos:"
 				},
-				"MUSIC_SAVINGS": {
-					"INTRO": "3 самых сохраняемых трека:"
+				"music_savings": {
+					"intro": "3 most saved tracks:"
 				}
 			},
-			"TOP": {
-				"INTRO": "Здесь тоже могут быть пропущены некоторые значения по той же досадной причине. К тому же, если ты смотришь эту страницу летом 2020 года, многое из нового функционала для тебя ещё не допилено. А теперь сюрприз. Это была не последняя часть статистики. Признайся, тебе ведь интересно узнать самый популярный контент не только за неделю, но и за всё время? Признаемся в ответ, нам такие значения даже легче получить, поскольку не нужно обрабатывать дату. И раз мы друг друга поняли, давай взглянем на глобальный топ всех плюшек.",
-				"REPOSTS": {
-					"INTRO": "3 самых репостируемых поста:"
+			"top": {
+				"intro": "Here, too, some values may be missing for the same annoying reason. In addition, if you are looking at this page in the summer of 2020, a lot of the new functionality has not been finalized for you yet. Now for a surprise. This was not the last piece of statistics. Admit it, you are interested in finding out the most popular content not only in a week, but all the time? We admit in return that it is even easier for us to get such values, since we dont need to process the date. And since we understood each other, let's take a look at the global top of all goodies.",
+				"reposts": {
+					"intro": "3 most reposted posts:"
 				},
-				"POST_RATINGS": {
-					"INTRO": "3 самых рейтинговых поста:"
+				"post_ratings": {
+					"intro": "3 most rated posts:"
 				},
-				"IMAGE_RATINGS": {
-					"INTRO": "3 самых рейтинговых пикчи:"
+				"image_ratings": {
+					"intro": "3 most rated images:"
 				},
-				"VIDEO_RATINGS": {
-					"INTRO": "3 самых рейтинговых видео:"
+				"video_ratings": {
+					"intro": "3 most rated videos:"
 				},
-				"VIDEO_VIEWS": {
-					"INTRO": "3 самых просматриваемых видео:"
+				"video_views": {
+					"intro": "3 most viewed videos:"
 				},
-				"MUSIC_LISTENING": {
-					"INTRO": "3 самых слушаемых трека:"
+				"music_listening": {
+					"intro": "3 most listened tracks:"
 				},
-				"POST_COMMENTS": {
-					"INTRO": "3 самых комментируемых поста:"
+				"post_comments": {
+					"intro": "3 most commented posts:"
 				},
-				"IMAGE_COMMENTS": {
-					"INTRO": "3 самых комментируемых пикчи:"
+				"image_comments": {
+					"intro": "3 most commented images:"
 				},
-				"VIDEO_COMMENTS": {
-					"INTRO": "3 самых комментируемых видео:"
+				"video_comments": {
+					"intro": "3 most commented videos:"
 				},
-				"IMAGE_SAVINGS": {
-					"INTRO": "3 самых сохраняемых пикчи:"
+				"image_savings": {
+					"intro": "3 most saved images:"
 				},
-				"VIDEO_SAVINGS": {
-					"INTRO": "3 самых сохраняемых видео:"
+				"video_savings": {
+					"intro": "3 most saved videos:"
 				},
-				"MUSIC_SAVINGS": {
-					"INTRO": "3 самых сохраняемых трека:"
+				"music_savings": {
+					"intro": "3 most saved tracks:"
 				}
 			},
-			"EXTRA": {
-				"INTRO": "И напоследок,",
-				"HASHTAGS": "3 самых популярных хештега за всё время:",
-				"BOOKMARKS": "3 самых добавляемых в закладки записи:",
-				"STICKERPACKS": "3 самых сохраняемых стикерпака:",
-				"USER_LANGS": "3 самых распространённых языка среди пользователей:",
-				"CLUB_LANGS": "3 самых используемых в клубах языка:",
-				"CONFA_LANGS": "3 самых используемых в конфах языка:",
-				"CONFA_COMMANDS": "3 самых часто вызываемых команды в конфах:",
-				"LARGEST_CLUB_MEMBERS": "Число участников самого большого клуба: ",
-				"LARGEST_CONFA_MEMBERS": "Число участников самой большой конфы: "
+			"extra": {
+				"intro": "And finally,",
+				"hashtags": "Top 3 hashtags of all time:",
+				"bookmarks": "Top 3 bookmarked posts:",
+				"stikerpacks": "Top 3 saved stickerpacks:",
+				"user_langs": "Top 3 languages users speak:",
+				"club_langs": "Top 3 languages clubs use:",
+				"confa_langs": "Top 3 languages confas use:",
+				"confa_commands": "3 most used commands in confas:",
+				"largest_club_members": "# of members of the largest club: ",
+				"largest_confa_members": "# of members of the largest confa: "
 			}
 		},
-		"AUTH": {
-			"INTRO": "Возможно, у тебя возник вопрос: а здесь можно творить вообще всё что угодно, особенно если скрыться под маской Анонима? Штож, троллинг и прочая жирнота действительно не будут караться со стороны администрации sode.su, но могут вызвать ответную реакцию от администраторов клубов. А контент, защищённый авторским правом, и всякая запрещёнка типа цп уже привлекут тебя к ответственности: ты получишь молотком на недельку. А вообще, лучше не вести себя как быдло с двача. Подмечено: при попытках всё обосрать люди часто забывают снять штаны. Теперь, если ты дошёл до этой строчки, пора уже и присоединиться к нам. Нужна только почта для подтверждения. Можешь взять временную, но тогда при потере пароля ты вряд ли сможешь его восстановить. Мы не занимаемся рассылкой спама и вам не советуем. Давай, жми на одну из этих кнопок, дружок. Либо можешь пока погулять анонимно, присмотреться к здешним колоритам. Для этого поищи в разделе \"Клубы\" какую нибудь интересную забегаловку с открытой стеной или комментами. Возможность писать анонимно у тебя никто никогда не отберёт. Напротив, админы клубов могут устанавливать принудительную анонимность. Разве что какая нибудь социобака забанит Анонима, но что поделать, правил для вежливой модерации здесь не предусмотрено.",
-			"LOG_IN": "Войти",
-			"SIGN_UP": "Регистрация"
+		"auth": {
+			"intro": "Perhaps you have a question: can you do anything here, especially if you hide under the guise of Anonym? Well, trolling and other fatness will really not be punished by the administration of sode.su, but may cause a backlash from the administrators of the clubs. And content protected by copyright and any prohibition like cp will already bring you to justice: you will get a hammer for a week. In general, it is better not to behave like cattle from 4chan. It has been noticed that when trying to crap everything, people often forget to take off their pants. Now, if you have gotten to this line, it is time to join us. All you need is your email for confirmation. You can take a temporary one, but then if you lose your password, you will hardly be able to recover it. We do not send spam and do not advise you. Come on, click one of these buttons, buddy. Or you can walk anonymously for now, take a closer look at the local coloring. To do this, look in the \"Clubs\" section for some interesting saloon with an open wall or comments. Nobody will ever take away the ability to write anonymously. On the contrary, club admins can establish forced anonymity. Unless some kind of social whore will ban Anonym, but what whatever it takes, there are no rules for polite moderation here."
 		}
 	},
-	"LOG_IN": {
-		"TITLE": "Вход",
-		"EMAIL": "E-mail",
-		"EMAIL_PLACEHOLDER": "",
-		"PASSWORD": "Пароль",
-		"PASSWORD_PLACEHOLDER": "Минимум 8 символов...",
-		"BUTTON": "Войти",
-		"SIGN_UP": "Нет аккаунта? ",
-		"SIGN_UP_BUTTON": "Зарегистрироваться",
-		"ERRORS": {
-			"TITLE": "Ошибка входа",
-			"EMPTY_HEADER": "Пустой почтовый адрес.",
-			"HEADER_IS_TOO_LONG": "Почтовый адрес слишком длинный.",
-			"INVALID_DATA": "Недопустимый почтовый адрес."
+	"log_in": {
+		"title": "Logging in",
+		"errors": {
+			"title": "Logging in failed",
+			"invalid_data": "The email address is invalid."
 		}
 	},
-	"SIGN_UP": {
-		"TITLE": "Регистрация",
-		"EMAIL": "E-mail",
-		"EMAIL_PLACEHOLDER": "",
-		"PASSWORD": "Пароль",
-		"PASSWORD_PLACEHOLDER": "Минимум 8 символов...",
-		"CONFIRM_PASSWORD": "Пароль, ещё раз",
-		"CONFIRM_PASSWORD_PLACEHOLDER": "",
-		"BUTTON": "Зарегистрироваться",
-		"LOG_IN": "Уже есть аккаунт? ",
-		"LOG_IN_BUTTON": "Войти",
-		"ERRORS": {
-			"TITLE": "Ошибка регистрации",
-			"EMPTY_HEADER": "Пустой почтовый адрес.",
-			"HEADER_IS_TOO_LONG": "Почтовый адрес слишком длинный.",
-			"INVALID_DATA": "Недопустимый почтовый адрес.",
-			"EMAIL_IS_OCCUPIED": "Этот почтовый адрес уже занят.",
-			"OBJ_EXISTS": "Каталог пользователя уже существует." 
+	"log_out": {
+		"title": "Logging out",
+		"text": "Log out of your account?<br />The session will be destroyed.",
+		"yes": "Yes",
+		"no": "No"
+	},
+	"popups": {
+		"buttons": {
+			"yes": "Yes",
+			"no": "No"
+		},
+		"cookies": {
+			"title": "The site uses cookies",
+			"text": "By continuing to use the site, you agree to the conditions for the processing of pesonal data and <a href='https://www.termsfeed.com/blog/sample-cookies-policy-template'>the use of cookie files</a>."
+		},
+		"links": {
+			"post": "Link to the post",
+			"image": "Link to the image",
+			"video": "Link to the video",
+			"music": "Link to the track"
 		}
 	},
-	"LOG_OUT": {
-		"TITLE": "Выход",
-		"TEXT": "Выйти из аккаунта?<br />Текущая сессия будет сохранена.",
-		"YES": "Да",
-		"NO": "Нет"
-	},
-	"ALERTS": {
-		"BUTTONS": {
-			"YES": "Да",
-			"NO": "Нет"
-		},
-		"COOKIES": {
-			"TITLE": "Сайт использует куки",
-			"TEXT": "Продолжая использовать сайт, ты соглашаешься с условиями обработки персональных данных и <a href=\"https://www.termsfeed.com/blog/sample-cookies-policy-template\">использования куки-файлов</a>."
-		},
-		"COOKIES_DISABLED": {
-			"TITLE": "У тебя отключены кукисы",
-			"TEXT": "Для полноценной работы с сайтом необходимы куки-файлы, а у тебя они отключены. Как же так? Ну ка включи."
-		},
-		"SESSION_NOT_IDENTIFIED": {
-			"TITLE": "Неидентифицированная сессия",
-			"TEXT": "Ты вошёл с нового устройства или через новую подсеть. Для безопасности твоих данных тебе нужно подтвердить эту сессию по ссылке, которую мы выслали на твою электронную почту."
-		},
-		"LINKS": {
-			"POST": "Ссылка на запись",
-			"IMAGE": "Ссылка на изображение",
-			"VIDEO": "Ссылка на видео",
-			"TRACK": "Ссылка на трек"
-		}
-	},
-	"NOTIFICATIONS": {
-		"INCOMING_FRIEND_REQUESTS": {
-			"TITLE": "Новые друзья!",
-			"TEXT": [
-				{
-					"0": "У тебя ",
-					"1": "У тебя ",
-					"2": "У тебя ",
-					"3": "У тебя ",
-					"4": "У тебя ",
-					"5": "У тебя ",
-					"6": "У тебя ",
-					"7": "У тебя ",
-					"8": "У тебя ",
-					"9": "У тебя "
-				},
-				{
-					"0": " заявок в друзья.",
-					"1": " заявка в друзья.",
-					"2": " заявки в друзья.",
-					"3": " заявки в друзья.",
-					"4": " заявки в друзья.",
-					"5": " заявок в друзья.",
-					"6": " заявок в друзья.",
-					"7": " заявок в друзья.",
-					"8": " заявок в друзья.",
-					"9": " заявок в друзья."
-				}
-			]
-		}
-	},
-	"ERRORS": {
-		"NO_REQUIRED_PARAMETERS_IN_REQUEST": "Не переданы нужные параметры в запросе.",
-		"NO_REQUIRED_COOKIES": "Ошибка авторизации. Попробуй войти в sode.su заново.",
-		"DATABASE_CONNECTION_FAILED": "Ошибка соединения с базой данных на сервере. Попробуй повторить запрос позже.",
-		"DATABASE_OPERATION_FAILED": "Ошибка при запросе к базе данных на сервере. Попробуй повторить запрос позже.",
-		"USERID_NOT_FOUND": "Идентификатор пользователя не найден. Попробуй войти в sode.su заново.",
-		"WRONG_PASSKEY": "Неправильный пароль. Попробуй войти в sode.su заново.",
-		"VERIFICATION_FAILED": "Верификация не пройдена. Проверь свой почтовый ящик, на который зарегистрирован аккаунт.",
-		"BANNED": [
-			"Ты заблокирован. Бан до ",
-			". Причина: ",
-			"."
-		],
-		"MOD_EMAIL_SENT_FAILED": "Ошибка отправки письма от sode.su.",
-		"UNIDENTIFIED_SESSION": "Сессия не идентифицирована. Попробуй войти в sode.su заново.",
-		"DEFAULT": "Неизвестная ошибка.",
-		"MAINTENANCE": "На сайте ведутся технические работы. Попробуй повторить запрос позже.",
-		"USERS_TITIE": "Ошибка получения списка пользователей"
-	},
-	"RICH": {
-		"HEADING": "Заголовок",
-		"QUOTE": "Цитата",
-		"BOLD": "Полужирный",
-		"ITALIC": "Курсив",
-		"UNDERLINED": "Подчёркнутый",
-		"OVERLINED": "Надчёркнутый",
-		"STRIKETHROUGH": "Зачёркнутый",
-		"SUPERSCRIPT": "Надстрочный",
-		"SUBSCRIPT": "Подстрочный",
-		"MONOSPACE": "Моноширинный",
-		"SPOILER": "Спойер"
-	},
-	"COMMENTS": {
-		"MORE_COMMENTS": "Больше комментариев",
-		"ALL_COMMENTS": "Все комментарии",
-		"REPORT": "Пожаловаться",
-		"DELETE": "Удалить",
-		"DEPLOY": "Развернуть",
-		"PLACEHOLDER": "Твой комментарий, максимум 1500 символов...",
-		"EMOJI": "Эмодзи",
-		"ATTACH": "Прикрепить",
-		"RESET": "Очистить",
-		"SUBMIT": "Отправить",
-		"ERRORS": {
-			"TITLE": "Ошибка комментария",
-			"EMPTY_TEXT": "Пустой текст комментария.",
-			"TEXT_IS_TOO_LONG": "Текст комментария слишком длинный.",
-			"OBJ_DOES_NOT_EXIST": "Изображение не существует.",
-			"HACKER_ATTACK": "Недопустимые ссылки в тексте."
-		}
-	},
-	"FRAMES": {
-		"IMAGE": {
-			"DEFAULT_DESCRIPTION": "%[<Без описания>]%",
-			"LIKE": "Нравится",
-			"DISLIKE": "Не нравится",
-			"LINK": "Ссылка",
-			"SAVE": "Сохранить",
-			"DOWNLOAD": "Скачать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить"
-		},
-		"VIDEO": {
-			"DEFAULT_DESCRIPTION": "%[<Без описания>]%",
-			"LIKE": "Нравится",
-			"DISLIKE": "Не нравится",
-			"LINK": "Ссылка",
-			"SAVE": "Сохранить",
-			"DOWNLOAD": "Скачать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить"
-		},
-		"POST": {
-			"LINK": "Ссылка",
-			"ARCHIVE": "Архивировать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"LIKE": "Нравится",
-			"DISLIKE": "Не нравится",
-			"REPOST": "Поделиться"
-		}
-	},
-	"AUDIOPLAYER": {
-		"DEFAULT": {
-			"TITLE": "Без названия",
-			"ARTIST": "Неизвестен",
-			"LYRICS": ""
-		},
-		"LINK": "Ссылка",
-		"SAVE": "Сохранить",
-		"DOWNLOAD": "Скачать",
-		"REPORT": "Пожаловаться",
-		"DELETE": "Удалить"
-	},
-	"PROFILE": {
-		"DEFAULT": {
-			"NAME": "Аноним",
-			"BIO": "<p>Этот пользователь ещё не отредактировал свою биографию.</p>",
-			"SELF_BIO": "<p>Привет. Это твоя страница. Прежде всего, тебе нужно подтвердить аккаунт по ссылке, которую мы отправили на указанную почту. После подтверждения тебе станет доступен весь функционал sode.su. Чтобы отредактировать профиль, нажми на шестерёнку. Обрати внимание, что у тебя уже есть стена, на которой можешь писать только ты. Развлекайся.</p>"
-		},
-		"NOT_SPECIFIED": {
-			"LOCATION": "Не указано",
-			"LANGUAGES": "Не указаны",
-			"WEBSITE": "Не указан"
-		},
-		"LOCATION": "Местоположение: ",
-		"LANGUAGES": "Языки: ",
-		"WEBSITE": "Вебсайт: ",
-		"OPEN_CHAT": "Открыть чат",
-		"FRIEND": "Подружиться",
-		"THEME": "Оформление",
-		"IMAGES": "Изображения",
-		"VIDEOS": "Видео",
-		"MUSIC": "Музыка",
-		"EDIT": {
-			"TITLE": "Редактировать профиль – sode.su",
-			"COVER": "Обложка",
-			"AVATAR": "Аватар",
-			"NAME": "Имя",
-			"NAME_PLACEHOLDER": "Максимум 150 символов...",
-			"BIO": "О себе",
-			"BIO_PLACEHOLDER": "Максимум 15000 символов...",
-			"LOCATION": "Местоположение",
-			"LOCATION_PLACEHOLDER": "Максимум 150 символов...",
-			"LANGUAGES": "Языки",
-			"WEBSITE": "Вебсайт",
-			"WEBSITE_PLACEHOLDER": "Максимум 150 символов...",
-			"STYLES": {
-				"TITLE": "Стили",
-				"PROFILE": "Профиль",
-				"FRIENDS": "Список друзей",
-				"CHATS": "Чаты",
-				"FEED": "Ленты",
-				"CLUBS": "Список клубов",
-				"IMAGES": "Галерея",
-				"VIDEOS": "Видеохостинг",
-				"MUSIC": "Проигрывателя",
-				"STYLES": "Темы оформления"
-			},
-			"CANCEL": "Отмена",
-			"SUBMIT": "Сохранить",
-			"ERRORS": {
-				"TITLE": "Ошибка редактирования профиля",
-				"EMPTY_HEADER": "Пустое имя профиля.",
-				"HEADER_IS_TOO_LONG": "Имя профиля слишком длинное.",
-				"HACKER_ATTACK": "Недопустимые ссылки в тексте.",
-				"INVALID_DATA": "Нет такого языка.",
-				"OBJ_DOES_NOT_EXIST": "Нет такого стиля."
-			}
-		}
-	},
-	"WALL": {
-		"NEW_POST": {
-			"PLACEHOLDER": "Новая запись, максимум 15000 символов...",
-			"ANONYMLY": "Анонимно",
-			"EMOJI": "Эмодзи",
-			"ATTACH": "Прикрепить",
-			"RESET": "Очистить",
-			"SUBMIT": "Отправить",
-			"ERRORS": {
-				"TITLE": "Ошибка публикации записи",
-				"EMPTY_TEXT": "Пустой текст записи.",
-				"TEXT_IS_TOO_LONG": "Текст записи слишком длинный.",
-				"FORBIDDEN": "Доступ запрещён. Возможно, это не твоя стена.",
-				"HACKER_ATTACK": "Недопустимые ссылки в тексте."
-			}
-		},
-		"POSTS": {
-			"UNPIN": "Открепить",
-			"PIN": "Закрепить",
-			"LINK": "Ссылка",
-			"ARCHIVE": "Архивировать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"LIKE": "Нравится",
-			"DISLIKE": "Не нравится",
-			"REPOST": "Поделиться",
-			"DEPLOY": "Развернуть",
-			"DELETE_FRAME": {
-				"TITLE": [
-					"Удалить запись #",
-					"?"
-				],
-				"TEXT": "Это действие будет невозможно отменить."
-			},
-			"ERRORS": {
-				"UNPIN_TITLE": "Ошибка открепления записи",
-				"PIN_TITLE": "Ошибка закрепления записи",
-				"DELETE_TITLE": "Ошибка удаления записи",
-				"FORBIDDEN": "Доступ запрещён. Возможно, это не твоя стена.",
-				"OBJ_DOES_NOT_EXIST": "Запись не существует."
-			}
-		},
-		"SHOW_MORE_POSTS": "Показать больше записей",
-		"SHOW_ALL_POSTS": "Показать все записи",
-		"STUB": "На этой стене нет записей",
-		"ORIGINAL_POST_HAS_BEEN_DELETED": "Исходная запись удалена!"
-	},
-	"FRIENDS": {
-		"TITLE": "Друзья – sode.su",
-		"MUTUAL": "Взаимные",
-		"INCOMING": "Входящие",
-		"OUTCOMING": "Исходящие",
-		"UNFRIEND": "Убрать",
-		"ACCEPT": "Принять",
-		"REJECT": "Отклонить",
-		"WITHDRAW": "Отозвать",
-		"MUTUAL_STUB": "У тебя нет взаимных друзей",
-		"INCOMING_STUB": "У тебя нет входящих заявок в друзья",
-		"OUTCOMING_STUB": "У тебя нет исходящих заявок в друзья",
-		"NEW_FRIEND": {
-			"TITLE": "Новый друг",
-			"TEXT": [
-				"Пользователь ",
-				" добавлен в друзья."
-			]
-		},
-		"ERRORS": {
-			"GETTING_FRIENDS_TITLE": "Ошибка получения списка друзей",
-			"FRIEND_TITLE": "Ошибка добавления в друзья",
-			"INACCESSIBLE_FRIEND": [
-				"Пользователя ",
-				" нельзя добавить в друзья."
-			],
-			"ALREADY_FRIENDED": [
-				"Пользователь ",
-				" – уже твой друг."
-			],
-			"UNFRIEND_TITLE": "Ошибка удаления из друзей"
-		}
-	},
-	"THEMES": {
-		"TITLE": "Темы оформления – sode.su",
-		"NAV": {
-			"FONTS": "Шрифты",
-			"BASIC": "Базовые",
-			"PROFILE": "Профиль",
-			"CLUBS": "Клубы",
-			"FRIENDS": "Друзья",
-			"FEED": "Лента",
-			"CLUBS_LIST": "Список клубов",
-			"IMAGES": "Галерея",
-			"VIDEOS": "Видеохостинг",
-			"MUSIC": "Проигрыватель"
-		},
-		"FORM": {
-			"GO_TO_INSTRUCTION": "Перейти к инструкции",
-			"DOWNLOAD_TEST_PAGE": "Скачать тестовую страницу",
-			"DRAGDROP_STYLE": "Для загрузки нового стиля кликни или перетащи файл сюда",
-			"DRAGDROP_FONT": "Для загрузки нового шрифта кликни или перетащи файл сюда",
-			"NAME": "Имя",
-			"AUTHOR": "Автор",
-			"NAME_PLACEHOLDER": "Максимум 150 символов...",
-			"AUTHOR_PLACEHOLDER": "Максимум 150 символов...",
-			"BUTTON": "Закачать",
-			"FILE_UPLOADING": "Загрузка файла...",
-			"ERRORS": {
-				"FILE_IS_TOO_LARGE": "Файл слишком большой!",
-				"FILE_IS_NOT_SELECTED": "Файл не выбран!",
-				"NAME_IS_NOT_FILLED": "Не указано имя!",
-				"NAME_IS_TOO_LONG": "Имя слишком длинное!",
-				"AUTHOR_IS_NOT_FILLED": "Не указан автор!",
-				"AUTHOR_IS_TOO_LONG": "Автор слишком длинный!"
-			}
-		},
-		"COMMON_COPYRIGHT": "Все материалы, загруженные на sode.su без лицензий и указания авторского права, по-умолчанию принадлежат его сообществу. Любая свободная лицензия даёт тебе авторское право, но тебе придётся самому следить за соблюдением пользователями условий договора. Администрация sode.su поможет тебе пресечь нарушение в случае обращения, но не обязуется их искать.",
-		"HASH": "хэш: ",
-		"RENAME": "Переименовать",
-		"REMOVE": "Убрать",
-		"STUBS": {
-			"FONTS": "У тебя нет шрифтов",
-			"BASIC": "У тебя нет базовых стилей",
-			"PROFILE": "У тебя нет стилей для профиля",
-			"CLUBLS": "У тебя нет стилей для клубов",
-			"FRIENDS": "У тебя нет стилей для списка друзей",
-			"FEED": "У тебя нет стилей для ленты",
-			"CLUBS_LIST": "У тебя нет стилей для списка клубов",
-			"IMAGES": "У тебя нет стилей для галереи",
-			"VIDEOS": "У тебя нет стилей для видеохостинга",
-			"MUSIC": "У тебя нет стилей для аудиоплеера"
-		}
-	},
-	"STYLE": {
-		"TITLE": " – стиль sode.su",
-		"INFO": {
-			"TO_THEMES": "К темам",
-			"ADD": "Добавить",
-			"DOWNLOAD": "Скачать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"TO_COMMENTS": "К комментариям",
-			"HASH": "хэш: ",
-			"AUTHOR": "Автор: ",
-			"COUNTER": "Число сохранений: ",
-			"TYPE": {
-				"BASIC": "базовый стиль",
-				"PROFILE": "стиль профиля",
-				"CLUBS": "стиль клуба",
-				"FRIENDS": "стиль списка друзей",
-				"FEED": "стиль ленты",
-				"CLUBS_LIST": "стиль списка клубов",
-				"IMAGES": "стиль галереи",
-				"VIDEOS": "стиль видеохостинга",
-				"MUSIC": "стиль проигрывателя"
-			}
-		},
-		"COMMENTS": {
-			"STUB": "К этому стилю нет комментариев",
-			"MORE_COMMENTS": "Больше комментариев",
-			"ALL_COMMENTS": "Все комментарии",
-			"COMMENT_HAS_BEEN_DELETED": "Комментарий удалён!",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"PLACEHOLDER": "Твой комментарий, максимум 1500 символов...",
-			"ANONYMLY": "Анонимно",
-			"ATTACH": "Прикрепить",
-			"RESET": "Очистить",
-			"SUBMIT": "Отправить"
-		},
-		"ERROR": {
-			"TITLE": "Ошибка загрузки",
-			"TEXT": "Похоже, этого стиля не существует."
-		}
-	},
-	"FONT": {
-		"TITLE": " – шрифт sode.su",
-		"INFO": {
-			"TO_THEMES": "К темам",
-			"ADD": "Добавить",
-			"DOWNLOAD": "Скачать",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"TO_COMMENTS": "К комментариям",
-			"HASH": "хэш: ",
-			"AUTHOR": "Автор: ",
-			"COUNTER": "Число сохранений: ",
-			"TYPE": "шрифт"
-		},
-		"PANGRAM": "Эй, жлоб! Где туз? Прячь юных с'ёмщиц в шкаф. <br /> 123456789[]\"#§_%|@\\¤:^&amp;&lt;&gt;{}`~∞+–/*;=()-¬",
-		"COMMENTS": {
-			"STUB": "К этому шрифту нет комментариев",
-			"MORE_COMMENTS": "Больше комментариев",
-			"ALL_COMMENTS": "Все комментарии",
-			"COMMENT_HAS_BEEN_DELETED": "Комментарий удалён!",
-			"REPORT": "Пожаловаться",
-			"DELETE": "Удалить",
-			"PLACEHOLDER": "Твой комментарий, максимум 1500 символов...",
-			"ANONYMLY": "Анонимно",
-			"ATTACH": "Прикрепить",
-			"RESET": "Очистить",
-			"SUBMIT": "Отправить"
-		},
-		"ERROR": {
-			"TITLE": "Ошибка загрузки",
-			"TEXT": "Похоже, этого шрифта не существует."
-		}
-	},
-	"IMAGES": {
-		"TITLE": "Изображения – sode.su",
-		"NEW_ALBUM": {
-			"TITLE": "Новый альбом",
-			"NAME": "Имя",
-			"DESCRIPTION": "Описание",
-			"NAME_PLACEHOLDER": "Максимум 150 символов...",
-			"DESCRIPTION_PLACEHOLDER": "Максимум 1500 символов...",
-			"PRIVATE": "Тайный",
-			"PROTECTED": "Защищённый",
-			"PUBLIC": "Явный",
-			"PRIVATE_TITLE": "Тайный альбом: только ты можешь видеть информацию о нём и сетку изображений",
-			"PROTECTED_TITLE": "Защищённый альбом: ты и твои друзья могут видеть информацию о нём и сетку изображений",
-			"PUBLIC_TITLE": "Явный альбом: все пользователи могут видеть информацию о нём и сетку изображений",
-			"SUBMIT": "Создать",
-			"ERRORS": {
-				"TITLE": "Ошибка создания нового альбома",
-				"NAME_IS_NOT_FILLED": "Не указано имя.",
-				"NAME_IS_TOO_LONG": "Имя слишком длинное.",
-				"DESCRIPTION_IS_TOO_LONG": "Описание слишком длинное."
-			}
-		},
-		"ALBUMS": {
-			"ERROR": "Ошибка загрузки альбомов",
-			"STUB": "У этого пользователя нет альбомов",
-			"PRIVATE": "Тайный",
-			"PROTECTED": "Защищённый",
-			"PUBLIC": "Явный",
-			"IMAGES_COUNT": {
-				"0": " изображений",
-				"1": " изображение",
-				"2": " изображения",
-				"3": " изображения",
-				"4": " изображения",
-				"5": " изображений",
-				"6": " изображений",
-				"7": " изображений",
-				"8": " изображений",
-				"9": " изображений"
-			},
-			"@": {
-				"name": "Аватарки (@)",
-				"description": "Изображения, которые можно ставить как аватарки профиля."
-			},
-			"+": {
-				"name": "Изображения (+)",
-				"description": "Стандартная явная солянка со всякими изображениями."
-			}
-		}
+	"errors": {},
+	"markup": {
+		"heading": "Heading",
+		"quote": "Quote",
+		"bold": "Bold",
+		"italic": "Italic",
+		"underline": "Underline",
+		"overline": "Overline",
+		"strikethrough": "Strikethrough",
+		"superscript": "Superscript",
+		"subscript": "Subscript",
+		"monospace": "Monospace",
+		"spoiler": "Spoiler"
 	}
 }

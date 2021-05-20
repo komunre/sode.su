@@ -1,35 +1,11 @@
 {
-	"META": {
-		"LANG": "en",
-		"SEPARATOR": ", "
+	"time": {
+		"forever": "foverer",
+		"today": "today at {{TIME}}",
+		"yesterday": "yesterday at {{TIME}}",
+		"tomorrow": "tomorrow at {{TIME}}"
 	},
-	"TIME": {
-		"FOREVER": "foverer",
-		"TODAY": "today at {{TIME}}",
-		"YESTERDAY": "yesterday at {{TIME}}",
-		"TOMORROW": "tomorrow at {{TIME}}"
-	},
-	"LOCATIONS": {
-		"Earth": "Earth",
-		"Europe": "Europe",
-		"Asia": "Asia",
-		"Eurasia": "Eurasia",
-		"Africa": "Africa",
-		"North America": "North America",
-		"South America": "South America",
-		"America": "America",
-		"Australia": "Australia",
-		"Oceania": "Oceania",
-		"Antarctica": "Antarctica",
-		"PMR": "PMR",
-		"Moldova": "Moldova",
-		"Nihon": "Japan",
-		"Ukraine": "Ukraine",
-		"Belarus": "Belarus",
-		"Russia": "Russia",
-		"EU": "European Union"
-	},
-	"LANGUAGES": {
+	"langs": {
 		"epo": "Esperanto",
 		"eng": "English",
 		"rus": "Russian",
@@ -56,669 +32,229 @@
 		"bel": "Belorussian",
 		"ron": "Romanian"
 	},
-	"PRELOADER": "Loading...",
-	"TOPNAV": {
-		"HOME": "Home",
-		"FRIENDS": "Friends",
-		"CHATS": "Chats",
-		"FEED": "Feed",
-		"FEEDBACK": "Feedback",
-		"CLUBS": "Clubs",
-		"MEDIA": "Media",
-		"IMAGES": "Images",
-		"VIDEOS": "Videos",
-		"MUSIC": "Music",
-		"HELP": "Help",
-		"LANGUAGE": "Language",
-		"LOG_IN": "Log in",
-		"SIGN_UP": "Sign up"
+	"preloader": "Loading...",
+	"topnav": {
+		"home": "Home",
+		"friends": "Friends",
+		"feed": "Feed",
+		"feedback": "Feedback",
+		"clubs": "Clubs",
+		"media": "Media",
+		"images": "Images",
+		"videos": "Videos",
+		"music": "Music",
+		"lang": "Language",
+		"log_in": "Log in"
 	},
-	"MENU": {
-		"HOME": "Home",
-		"FRIENDS": "Friends",
-		"CHATS": "Chats",
-		"FEED": "Feed",
-		"FEEDBACK": "Feedback",
-		"CLUBS": "Clubs",
-		"IMAGES": "Images",
-		"VIDEOS": "Videos",
-		"MUSIC": "Music",
-		"HELP": "Help"
+	"menu": {
+		"home": "Home",
+		"friends": "Friends",
+		"feed": "Feed",
+		"feedback": "Feedback",
+		"clubs": "Clubs",
+		"images": "Images",
+		"videos": "Videos",
+		"music": "Music"
 	},
-	"SELF_MENU": {
-		"HOMEPAGE": "My homepage",
-		"EDIT_PROFILE": "Edit profile",
-		"THEMES": "Design themes",
-		"BOOKMARKS": "Bookmarks",
-		"STICKERS": "Stickers",
-		"POLLS": "Polls",
-		"ACCOUNT": "Account",
-		"MODERATION": "Moderation",
-		"LOG_OUT": "Log out",
-		"HELP": "Help",
-		"LANGUAGE": "Language"
+	"self_menu": {
+		"home": "My homepage",
+		"settings": "Settings",
+		"themes": "Design themes",
+		"bookmarks": "Bookmarks",
+		"stickers": "Stickers",
+		"polls": "Polls",
+		"moderation": "Moderation",
+		"log_out": "Log out",
+		"lang": "Language"
 	},
-	"COPYRIGHT": "Sode.su © 2019-2020",
-	"INDEX": {
-		"TITLE": "sode.su – an antisocial network",
-		"HEADING": "Welcome to anonymous social network",
-		"INTRO": "Sode.su (そうです) is an antisocial rather than social network. Nobody cares about your age or gender here. There are only three prepared fields in your profile for auto-configuration bots: location, languages ​​and website. No sources of inspiration, no attitude to alcohol, smoking and anal sex. Instead of filling out a carbon copy profile, you are given another tool: a powerful markup language. You can embed <a href='https://sode.su'>links</a> into any part of the text, insert images, videos and music anywhere, <i>italicize</i> words, <ins>underline</ins>, cover with <mark>spoilers</mark> and do a lot of other perversions. Not only in the profile, this markup is available everywhere: in posts, comments, messages... Want more? Write your own style sheet for your page, and your profile design will be transformed for everyone who visits it. As with any social network, you can make friends here. Only now you cannot show off them, they are all hidden. Choose your friends wisely, not just for show. The number of members of every group is also hidden, and under its posts, in addition to likes, there are dislikes. Authors of both are not displayed, only the rating is known. Dont like something? Do you bet that the main thing on the internet is the approval of the celebrities, and the price of each statement is determined by the authority of the author? Then boldly turn around and drag your elastic ass out of here, because here there is an opportunity not to sign your posts and comments at all, but to leave them anonymously, on behalf of a special user – <a href='@0'>Anonym</a>. Moreover, Anonym is available even for unregistered visitors. Registration, of course, gives you some advantages: your own profile and wall, messages, friends, but you can use sode.su fully as an imageboard without registration. If you are interested, we suggest that you familiarize yourself with the markup in more detail, the name of which is Simple Markup (SMU). You can call it Super Markup for fun.",
-		"MARKUP": "<hr /> <h1># Heading</h1> <h2>## Heading<h2> <h3>### Heading</h3> <p><span class='reply'>&gt;&gt;123</span> (reply)</p> <blockquote>&gt; quote (the space after &gt; is required)</blockquote> <br /> <p>*[<b>Bold</b>]* <br />%[<i>Italic</i>]%<br /> _[<ins>Underline</ins>]_<br /> ^[<span class='overline'>Overline</span>]^<br /> ~[<del>Strikethrough</del>]~<br /> +[<sup>Superscript</sup>]+<br /> &[<sub>Subscript</sub>]&<br /> `[<tt>Monospase</tt>]`<br /> =[<mark>Spoiler</mark>]=<br /> <br /> [[link to the image] optional alt]<br /> [{link to the video} optional link to the poster]<br /> {[link to the track] optional title}<br /> {{<a href='https://sode.su'>https://sode.su</a>}} (direct link)<br /> {{https://sode.su} different link text}</p> <br /> <ul><li>- item of unordered list</li> <li>- another item</li></ul> <br /> <ul style='list-style: none;'><li>0. item of ordered list, 0 will turn into 1</li> <li>0. another item, 0 will turn into 2</li></ul> <br /> <p>--- (horizontal rule)</p> <hr />",
-		"STATS": {
-			"COUNT": {
-				"INTRO": "You will soon try these brackets and hyphens yourself. In addition, there are ubiquitous mentions of users (<span class='mention username'>@username</span>) and clubs (<span class='mention clubname'>~clubname</span>), and <span class='hashtag'>#hashtags</span>. All types of groups are called clubs here: publics, boards and just private corrals. In fact, such aliases for mentions and the address bar (such as <span class='mention username'>@username</span>) simply cannot be taken. Let's say someone takes the username <span class='mention username'>@putin</span>, and then the real putin joins the social network and will pull us on the testicles for a long time. In this situation, of course, we would have made a decision in favor of an anonym rather than some kind of president, but if someone else creates a club <span class='mention clubname'>~apple</span>, and then the real CEO of Apple Inc will appear, it is will be inconvenient. Let's be honest, we are not very willing to issue such nicknames, but we give everyone a numeric identifier. For example, Anonym's profile: <span class='mention username'>@0</span>, and the profile of the creator of this chicken coop: <span class='mention username'>@1</span>. Other users, of course, have longer numbers and not so pretty, but you should not dwell on their beauty. Your number is native, and for you, it is the most beautiful. It is even better if there is more entropy in it, it emphasizes your individuality. Although, you know, I changed my mind. Take your favorite username, but remember that I reserve the right to take it back from you one day. <br /> Now look how many anonyms have already joined us before you and how much content they have created.",
-				"USERS": "Total users: ",
-				"CLUBS": "Total clubs: ",
-				"CLUB_MEMBERS": "Total members of all clubs: ",
-				"POSTS": "Total posts: ",
-				"POST_COMMENTS": "Total comments to all posts: ",
-				"CONFAS": "Total group chats (confas): ",
-				"MESSAGES": "Total messages: ",
-				"CONFA_MEMBERS": "Total members of all confas: ",
-				"VOICE_STOCK": "Total grinded voices (a joint stock): ",
-				"IMAGES": "Total original images: ",
-				"VIDEOS": "Total original videos: ",
-				"TRACKS": "Total original tracks (of music): ",
-				"THEMES": "Total original themes: ",
-				"FONTS": "Total original fonts: ",
-				"STICKERS": "Total original stickers: ",
-				"STICKERPACKS": "Total stickerpacks: ",
-				"POLLS": "Total polls: ",
-				"VOICES": "Total voice messages: ",
-				"SCHEDULED_POSTS": "Total scheduled posts: ",
-				"SCHEDULED_MESSAGES": "Total scheduled messages: "
+	"copyright": "Sode.su © 2019-2021",
+	"index": {
+		"title": "sode.su – an antisocial network",
+		"heading": "Welcome to anonymous antisocial network",
+		"intro": "Sode.su (そうです) is an antisocial rather than social network. Nobody cares about your age or gender here. There are only three prepared fields in your profile for auto-configuration bots: location, languages ​​and website. No sources of inspiration, no attitude to alcohol, smoking and anal sex. Instead of filling out a carbon copy profile, you are given another tool: a powerful markup language. You can embed <a href='https://sode.su'>links</a> into any part of the text, insert images, videos and music anywhere, <i>italicize</i> words, <ins>underline</ins>, cover with <mark>spoilers</mark> and do a lot of other perversions. Not only in the profile, this markup is available everywhere: in posts, comments, messages... Want more? Write your own style sheet for your page, and your profile design will be transformed for everyone who visits it. As with any social network, you can make friends here. Only now you cannot show off them, they are all hidden. Choose your friends wisely, not just for show. The number of members of every group is also hidden, and under its posts, in addition to likes, there are dislikes. Authors of both are not displayed, only the rating is known. Dont like something? Do you bet that the main thing on the internet is the approval of the celebrities, and the price of each statement is determined by the authority of the author? Then boldly turn around and drag your elastic ass out of here, because here there is an opportunity not to sign your posts and comments at all, but to leave them anonymously, on behalf of a special user – <a href='@0'>Anonym</a>. Moreover, Anonym is available even for unregistered visitors. Registration, of course, gives you some advantages: your own profile and wall, messages, friends, but you can use sode.su fully as an imageboard without registration. If you are interested, we suggest that you familiarize yourself with the markup in more detail, the name of which is Simple Markup (SMU). You can call it Super Markup for fun.",
+		"layout": "<hr /> <h1># Heading</h1> <h2>## Heading<h2> <h3>### Heading</h3> <p><span class='reply'>&gt;&gt;123</span> (reply)</p> <blockquote>&gt; quote (the space after &gt; is required)</blockquote> <br /> <p>*[<b>Bold</b>]* <br />%[<i>Italic</i>]%<br /> _[<ins>Underline</ins>]_<br /> ^[<span class='overline'>Overline</span>]^<br /> ~[<del>Strikethrough</del>]~<br /> +[<sup>Superscript</sup>]+<br /> &[<sub>Subscript</sub>]&<br /> `[<tt>Monospase</tt>]`<br /> =[<mark>Spoiler</mark>]=<br /> <br /> [[link to the image] optional alt]<br /> [{link to the video} optional link to the poster]<br /> {[link to the track] optional title}<br /> {{<a href='https://sode.su'>https://sode.su</a>}} (direct link)<br /> {{https://sode.su} different link text}</p> <br /> <ul><li>- item of unordered list</li> <li>- another item</li></ul> <br /> <ul style='list-style: none;'><li>0. item of ordered list, 0 will turn into 1</li> <li>0. another item, 0 will turn into 2</li></ul> <br /> <p>--- (horizontal rule)</p> <hr />",
+		"stats": {
+			"count": {
+				"intro": "You will soon try these brackets and hyphens yourself. In addition, there are ubiquitous mentions of users (<span class='mention username'>@username</span>) and clubs (<span class='mention clubname'>~clubname</span>), and <span class='hashtag'>#hashtags</span>. All types of groups are called clubs here: publics, boards and just private corrals. In fact, such aliases for mentions and the address bar (such as <span class='mention username'>@username</span>) simply cannot be taken. Let's say someone takes the username <span class='mention username'>@putin</span>, and then the real putin joins the social network and will pull us on the testicles for a long time. In this situation, of course, we would have made a decision in favor of an anonym rather than some kind of president, but if someone else creates a club <span class='mention clubname'>~apple</span>, and then the real CEO of Apple Inc will appear, it is will be inconvenient. Let's be honest, we are not very willing to issue such nicknames, but we give everyone a numeric identifier. For example, Anonym's profile: <span class='mention username'>@0</span>, and the profile of the creator of this chicken coop: <span class='mention username'>@1</span>. Other users, of course, have longer numbers and not so pretty, but you should not dwell on their beauty. Your number is native, and for you, it is the most beautiful. It is even better if there is more entropy in it, it emphasizes your individuality. Although, you know, I changed my mind. Take your favorite username, but remember that I reserve the right to take it back from you one day. <br /> Now look how many anonyms have already joined us before you and how much content they have created.",
+				"users": "Total users: ",
+				"clubs": "Total clubs: ",
+				"club_members": "Total members of all clubs: ",
+				"posts": "Total posts: ",
+				"post_comments": "Total comments to all posts: ",
+				"confas": "Total group chats (confas): ",
+				"messages": "Total messages: ",
+				"confa_members": "Total members of all confas: ",
+				"voice_stock": "Total grinded voices (a joint stock): ",
+				"images": "Total original images: ",
+				"videos": "Total original videos: ",
+				"music": "Total original tracks (of music): ",
+				"themes": "Total original themes: ",
+				"fonts": "Total original fonts: ",
+				"stickers": "Total original stickers: ",
+				"stickerpacks": "Total stickerpacks: ",
+				"polls": "Total polls: ",
+				"voices": "Total voice messages: ",
+				"scheduled_posts": "Total scheduled posts: ",
+				"scheduled_messages": "Total scheduled messages: "
 			},
-			"AVG": {
-				"INTRO": "As you can see, sode.su has already achieved excellent results and continues to develop. The date of birth of the social network is April 27, 2019. In just the first year, it reached over 0 million new users. Now let's take a look at the average values.",
-				"FRIENDS": "Average # of friends one user has: ",
-				"WALL_POSTS": "Average # of posts on one wall: ",
-				"PRIVATE_MESSAGES": "Average # of messages in one private chat: ",
-				"CONFA_MESSAGES": "Average # of messages in one confa: ",
-				"STICKERPACK_STICKERS": "Average # of stickers in one stickerpack: ",
-				"CLUB_MEMBERS": "Average # of members in one club: ",
-				"POST_COMMENTS": "Average # of comments to one post: ",
-				"IMAGE_COMMENTS": "Average # of comments to one image: ",
-				"VIDEO_COMMENTS": "Average # of comments to one video: ",
-				"THEME_COMMENTS": "Average # of comments to one theme: ",
-				"FONT_COMMENTS": "Average # of comments to one font: ",
-				"POST_RATING": "Average post rating: ",
-				"IMAGE_RATING": "Average image rating: ",
-				"VIDEO_RATING": "Average video rating: ",
-				"THEME_RATING": "Average theme rating: ",
-				"FONT_RATING": "Average font rating: "
+			"average": {
+				"intro": "As you can see, sode.su has already achieved excellent results and continues to develop. The date of birth of the social network is April 27, 2019. In just the first year, it reached over 0 million new users. Now let's take a look at the average values.",
+				"friends": "Average # of friends one user has: ",
+				"wall_posts": "Average # of posts on one wall: ",
+				"private_messages": "Average # of messages in one private chat: ",
+				"confa_messages": "Average # of messages in one confa: ",
+				"sitckerpack_stickers": "Average # of stickers in one stickerpack: ",
+				"club_members": "Average # of members in one club: ",
+				"post_comments": "Average # of comments to one post: ",
+				"image_comments": "Average # of comments to one image: ",
+				"video_comments": "Average # of comments to one video: ",
+				"theme_comments": "Average # of comments to one theme: ",
+				"font_comments": "Average # of comments to one font: ",
+				"post_rating": "Average post rating: ",
+				"image_rating": "Average image rating: ",
+				"video_rating": "Average video rating: ",
+				"theme_rating": "Average theme rating: ",
+				"font_rating": "Average font rating: "
 			},
-			"HASHTAGS": {
-				"INTRO": "To be honest, we would like to add more statistics here. If you have any ideas, send your suggestions to <a href='mailto:feedback@sode.su'>feedback@sode.su</a>. Remember there are hashtags here? We are not against trends, and we also keep a summary of popular tags for the last week. Here are 15 of the best."
+			"hashtags": {
+				"intro": "To be honest, we would like to add more statistics here. If you have any ideas, send your suggestions to <a href='mailto:feedback@sode.su'>feedback@sode.su</a>. Remember there are hashtags here? We are not against trends, and we also keep a summary of popular tags for the last week. Here are 15 of the best."
 			},
-			"WEEKLY_TOP": {
-				"INTRO": "If you carefully counted the hashtags and caught us in an undercount, it simply means that there were less than 15 hashtags in the last week. Considering the crazy popularity of sode.su, you might not even see anything in the trends at all, it is just that one text pad is followed by another without any useful information between them. That means that you urgently need to go to some club and write a post with a meaning and a couple of hashtags. Just do not write any trash about the cocks and anuses. If there are no ideas, it is better to leave trending hashtags empty. Another anonymous person will come soon with something to say. For now, let's take a look at the last piece of statistics – the most popular content of all sections <strong>for the last week</strong>.",
-				"REPOSTS": {
-					"INTRO": "3 most reposted posts:"
+			"weekly_top": {
+				"intro": "If you carefully counted the hashtags and caught us in an undercount, it simply means that there were less than 15 hashtags in the last week. Considering the crazy popularity of sode.su, you might not even see anything in the trends at all, it is just that one text pad is followed by another without any useful information between them. That means that you urgently need to go to some club and write a post with a meaning and a couple of hashtags. Just do not write any trash about the cocks and anuses. If there are no ideas, it is better to leave trending hashtags empty. Another anonymous person will come soon with something to say. For now, let's take a look at the last piece of statistics – the most popular content of all sections <strong>for the last week</strong>.",
+				"reposts": {
+					"intro": "3 most reposted posts:"
 				},
-				"POST_RATINGS": {
-					"INTRO": "3 most rated posts (by likes and dislikes):"
+				"post_ratings": {
+					"intro": "3 most rated posts (by likes and dislikes):"
 				},
-				"IMAGE_RATINGS": {
-					"INTRO": "3 most rated images:"
+				"image_ratings": {
+					"intro": "3 most rated images:"
 				},
-				"VIDEO_RATINGS": {
-					"INTRO": "3 most rated videos:"
+				"video_ratings": {
+					"intro": "3 most rated videos:"
 				},
-				"VIDEO_VIEWS": {
-					"INTRO": "3 most viewed videos:"
+				"video_views": {
+					"intro": "3 most viewed videos:"
 				},
-				"MUSIC_LISTENING": {
-					"INTRO": "3 most listened tracks:"
+				"music_listening": {
+					"intro": "3 most listened tracks:"
 				},
-				"POST_COMMENTS": {
-					"INTRO": "3 most commented posts:"
+				"post_comments": {
+					"intro": "3 most commented posts:"
 				},
-				"IMAGE_COMMENTS": {
-					"INTRO": "3 most commented images:"
+				"image_comments": {
+					"intro": "3 most commented images:"
 				},
-				"VIDEO_COMMENTS": {
-					"INTRO": "3 most commented videos:"
+				"video_comments": {
+					"intro": "3 most commented videos:"
 				},
-				"IMAGE_SAVINGS": {
-					"INTRO": "3 most saved images:"
+				"image_savings": {
+					"intro": "3 most saved images:"
 				},
-				"VIDEO_SAVINGS": {
-					"INTRO": "3 most saved videos:"
+				"video_savings": {
+					"intro": "3 most saved videos:"
 				},
-				"MUSIC_SAVINGS": {
-					"INTRO": "3 most saved tracks:"
+				"music_savings": {
+					"intro": "3 most saved tracks:"
 				}
 			},
-			"TOP": {
-				"INTRO": "Here, too, some values may be missing for the same annoying reason. In addition, if you are looking at this page in the summer of 2020, a lot of the new functionality has not been finalized for you yet. Now for a surprise. This was not the last piece of statistics. Admit it, you are interested in finding out the most popular content not only in a week, but all the time? We admit in return that it is even easier for us to get such values, since we dont need to process the date. And since we understood each other, let's take a look at the global top of all goodies.",
-				"REPOSTS": {
-					"INTRO": "3 most reposted posts:"
+			"top": {
+				"intro": "Here, too, some values may be missing for the same annoying reason. In addition, if you are looking at this page in the summer of 2020, a lot of the new functionality has not been finalized for you yet. Now for a surprise. This was not the last piece of statistics. Admit it, you are interested in finding out the most popular content not only in a week, but all the time? We admit in return that it is even easier for us to get such values, since we dont need to process the date. And since we understood each other, let's take a look at the global top of all goodies.",
+				"reposts": {
+					"intro": "3 most reposted posts:"
 				},
-				"POST_RATINGS": {
-					"INTRO": "3 most rated posts:"
+				"post_ratings": {
+					"intro": "3 most rated posts:"
 				},
-				"IMAGE_RATINGS": {
-					"INTRO": "3 most rated images:"
+				"image_ratings": {
+					"intro": "3 most rated images:"
 				},
-				"VIDEO_RATINGS": {
-					"INTRO": "3 most rated videos:"
+				"video_ratings": {
+					"intro": "3 most rated videos:"
 				},
-				"VIDEO_VIEWS": {
-					"INTRO": "3 most viewed videos:"
+				"video_views": {
+					"intro": "3 most viewed videos:"
 				},
-				"MUSIC_LISTENING": {
-					"INTRO": "3 most listened tracks:"
+				"music_listening": {
+					"intro": "3 most listened tracks:"
 				},
-				"POST_COMMENTS": {
-					"INTRO": "3 most commented posts:"
+				"post_comments": {
+					"intro": "3 most commented posts:"
 				},
-				"IMAGE_COMMENTS": {
-					"INTRO": "3 most commented images:"
+				"image_comments": {
+					"intro": "3 most commented images:"
 				},
-				"VIDEO_COMMENTS": {
-					"INTRO": "3 most commented videos:"
+				"video_comments": {
+					"intro": "3 most commented videos:"
 				},
-				"IMAGE_SAVINGS": {
-					"INTRO": "3 most saved images:"
+				"image_savings": {
+					"intro": "3 most saved images:"
 				},
-				"VIDEO_SAVINGS": {
-					"INTRO": "3 most saved videos:"
+				"video_savings": {
+					"intro": "3 most saved videos:"
 				},
-				"MUSIC_SAVINGS": {
-					"INTRO": "3 most saved tracks:"
+				"music_savings": {
+					"intro": "3 most saved tracks:"
 				}
 			},
-			"EXTRA": {
-				"INTRO": "And finally,",
-				"HASHTAGS": "Top 3 hashtags of all time:",
-				"BOOKMARKS": "Top 3 bookmarked posts:",
-				"STICKERPACKS": "Top 3 saved stickerpacks:",
-				"USER_LANGS": "Top 3 languages users speak:",
-				"CLUB_LANGS": "Top 3 languages clubs use:",
-				"CONFA_LANGS": "Top 3 languages confas use:",
-				"CONFA_COMMANDS": "3 most used commands in confas:",
-				"LARGEST_CLUB_MEMBERS": "# of members of the largest club: ",
-				"LARGEST_CONFA_MEMBERS": "# of members of the largest confa: "
+			"extra": {
+				"intro": "And finally,",
+				"hashtags": "Top 3 hashtags of all time:",
+				"bookmarks": "Top 3 bookmarked posts:",
+				"stikerpacks": "Top 3 saved stickerpacks:",
+				"user_langs": "Top 3 languages users speak:",
+				"club_langs": "Top 3 languages clubs use:",
+				"confa_langs": "Top 3 languages confas use:",
+				"confa_commands": "3 most used commands in confas:",
+				"largest_club_members": "# of members of the largest club: ",
+				"largest_confa_members": "# of members of the largest confa: "
 			}
 		},
-		"AUTH": {
-			"INTRO": "Perhaps you have a question: can you do anything here, especially if you hide under the guise of Anonym? Well, trolling and other fatness will really not be punished by the administration of sode.su, but may cause a backlash from the administrators of the clubs. And content protected by copyright and any prohibition like cp will already bring you to justice: you will get a hammer for a week. In general, it is better not to behave like cattle from 4chan. It has been noticed that when trying to crap everything, people often forget to take off their pants. Now, if you have gotten to this line, it is time to join us. All you need is your email for confirmation. You can take a temporary one, but then if you lose your password, you will hardly be able to recover it. We do not send spam and do not advise you. Come on, click one of these buttons, buddy. Or you can walk anonymously for now, take a closer look at the local coloring. To do this, look in the \"Clubs\" section for some interesting saloon with an open wall or comments. Nobody will ever take away the ability to write anonymously. On the contrary, club admins can establish forced anonymity. Unless some kind of social whore will ban Anonym, but what whatever it takes, there are no rules for polite moderation here.",
-			"LOG_IN": "Log in",
-			"SIGN_UP": "Sign up"
+		"auth": {
+			"intro": "Perhaps you have a question: can you do anything here, especially if you hide under the guise of Anonym? Well, trolling and other fatness will really not be punished by the administration of sode.su, but may cause a backlash from the administrators of the clubs. And content protected by copyright and any prohibition like cp will already bring you to justice: you will get a hammer for a week. In general, it is better not to behave like cattle from 4chan. It has been noticed that when trying to crap everything, people often forget to take off their pants. Now, if you have gotten to this line, it is time to join us. All you need is your email for confirmation. You can take a temporary one, but then if you lose your password, you will hardly be able to recover it. We do not send spam and do not advise you. Come on, click one of these buttons, buddy. Or you can walk anonymously for now, take a closer look at the local coloring. To do this, look in the \"Clubs\" section for some interesting saloon with an open wall or comments. Nobody will ever take away the ability to write anonymously. On the contrary, club admins can establish forced anonymity. Unless some kind of social whore will ban Anonym, but what whatever it takes, there are no rules for polite moderation here."
 		}
 	},
-	"LOG_IN": {
-		"TITLE": "Logging in",
-		"EMAIL": "E-mail",
-		"EMAIL_PLACEHOLDER": "",
-		"PASSWORD": "Password",
-		"PASSWORD_PLACEHOLDER": "Minimum 8 characters...",
-		"BUTTON": "Log in",
-		"SIGN_UP": "Dont have an account? ",
-		"SIGN_UP_BUTTON": "Sign up",
-		"ERRORS": {
-			"TITLE": "Logging in failed",
-			"EMPTY_HEADER": "The email address is empty.",
-			"HEADER_IS_TOO_LONG": "The email address is too long.",
-			"INVALID_DATA": "The email address is invalid."
+	"log_in": {
+		"title": "Logging in",
+		"errors": {
+			"title": "Logging in failed",
+			"invalid_data": "The email address is invalid."
 		}
 	},
-	"SIGN_UP": {
-		"TITLE": "Registration",
-		"EMAIL": "E-mail",
-		"EMAIL_PLACEHOLDER": "",
-		"PASSWORD": "Password",
-		"PASSWORD_PLACEHOLDER": "Minimum 8 characters...",
-		"CONFIRM_PASSWORD": "Confirm password",
-		"CONFIRM_PASSWORD_PLACEHOLDER": "",
-		"BUTTON": "Sign up",
-		"LOG_IN": "Already have an account? ",
-		"LOG_IN_BUTTON": "Log in",
-		"ERRORS": {
-			"TITLE": "Registration error",
-			"EMPTY_HEADER": "The email address is empty.",
-			"HEADER_IS_TOO_LONG": "The email address is too long.",
-			"INVALID_DATA": "The email address is invalid.",
-			"EMAIL_IS_OCCUPIED": "The email is already occupied.",
-			"OBJ_EXISTS": "An user direcrory already exists." 
+	"log_out": {
+		"title": "Logging out",
+		"text": "Log out of your account?<br />The session will be destroyed.",
+		"yes": "Yes",
+		"no": "No"
+	},
+	"popups": {
+		"buttons": {
+			"yes": "Yes",
+			"no": "No"
+		},
+		"cookies": {
+			"title": "The site uses cookies",
+			"text": "By continuing to use the site, you agree to the conditions for the processing of pesonal data and <a href='https://www.termsfeed.com/blog/sample-cookies-policy-template'>the use of cookie files</a>."
+		},
+		"links": {
+			"post": "Link to the post",
+			"image": "Link to the image",
+			"video": "Link to the video",
+			"music": "Link to the track"
 		}
 	},
-	"LOG_OUT": {
-		"TITLE": "Logging out",
-		"TEXT": "Log out of your account?<br />The session will remain saved.",
-		"YES": "Yes",
-		"NO": "No"
-	},
-	"ALERTS": {
-		"BUTTONS": {
-			"YES": "Yes",
-			"NO": "No"
-		},
-		"COOKIES": {
-			"TITLE": "The site uses cookies",
-			"TEXT": "By continuing to use the site, you agree to the conditions for the processing of pesonal data and <a href='https://www.termsfeed.com/blog/sample-cookies-policy-template'>the use of cookie files</a>."
-		},
-		"COOKIES_DISABLED": {
-			"TITLE": "Cookies disabled",
-			"TEXT": "Cookie files are necessary for the full operation of the site, and you have them disabled. How so? Well, enable them."
-		},
-		"SESSION_NOT_IDENTIFIED": {
-			"TITLE": "Session not identified",
-			"TEXT": "You are logged in from a new device or through a new subnetwork. For the security of your data you need to confirm this session by the link that we sent to your email."
-		},
-		"LINKS": {
-			"POST": "Link to the post",
-			"IMAGE": "Link to the image",
-			"VIDEO": "Link to the video",
-			"TRACK": "Link to the track"
-		}
-	},
-	"NOTIFICATIONS": {
-		"INCOMING_FRIEND_REQUESTS": {
-			"TITLE": "New friends!",
-			"TEXT": {
-				"0": "You have no friend requests.",
-				"1": "You have {{COUNT}} friend request.",
-				"2": "You have {{COUNT}} friend requests.",
-				"3": "You have {{COUNT}} friend requests.",
-				"4": "You have {{COUNT}} friend requests.",
-				"5": "You have {{COUNT}} friend requests.",
-				"6": "You have {{COUNT}} friend requests.",
-				"7": "You have {{COUNT}} friend requests.",
-				"8": "You have {{COUNT}} friend requests.",
-				"9": "You have {{COUNT}} friend requests."
-			}
-		}
-	},
-	"ERRORS": {
-		"NO_REQUIRED_PARAMETERS_IN_REQUEST": "No required parameters in request.",
-		"NO_REQUIRED_COOKIES": "Unauthorized. Try to log in sode.su again.",
-		"DATABASE_CONNECTION_FAILED": "Error connecting to database on the server. Try to request again later.",
-		"DATABASE_OPERATION_FAILED": "Error while operating with a database on the server. Try to request again later.",
-		"USERID_NOT_FOUND": "User id not found. Try to log in sode.su again.",
-		"WRONG_PASSKEY": "Wrong password. Try to log in sode.su again.",
-		"VERIFICATION_FAILED": "Verification failed. Check your email which the account is registered.",
-		"BANNED": "You are blocked. Ban until {{UNTIL}}. The reason: {{REASON}}.",
-		"MOD_EMAIL_SENT_FAILED": "Sending email from sode.su failed.",
-		"UNIDENTIFIED_SESSION": "A session in not identified. Try to log in sode.su again.",
-		"DEFAULT": "Unknown error.",
-		"MAINTENANCE": "The site is down for maintenance. Try to request again later.",
-		"USERS_TITIE": "Error getting the users list."
-	},
-	"RICH": {
-		"HEADING": "Heading",
-		"QUOTE": "Quote",
-		"BOLD": "Bold",
-		"ITALIC": "Italic",
-		"UNDERLINED": "Underlined",
-		"OVERLINED": "Overlined",
-		"STRIKETHROUGH": "Strikethrough",
-		"SUPERSCRIPT": "Superscript",
-		"SUBSCRIPT": "Subscript",
-		"MONOSPACE": "Monospace",
-		"SPOILER": "Spoiler"
-	},
-	"COMMENTS": {
-		"MORE_COMMENTS": "More comments",
-		"ALL_COMMENTS": "All comments",
-		"REPORT": "Report",
-		"DELETE": "Delete",
-		"DEPLOY": "Deploy",
-		"PLACEHOLDER": "Your comment here, maximum 1500 characters...",
-		"EMOJI": "Emoji",
-		"ATTACH": "Attach",
-		"RESET": "Reset",
-		"SUBMIT": "Send",
-		"ERRORS": {
-			"TITLE": "Comment error",
-			"EMPTY_TEXT": "Comment text is empty.",
-			"TEXT_IS_TOO_LONG": "Comment text is too long.",
-			"OBJ_DOES_NOT_EXIST": "The image does not exists.",
-			"HACKER_ATTACK": "Impermissible links in text."
-		}
-	},
-	"FRAMES": {
-		"IMAGE": {
-			"DEFAULT_DESCRIPTION": "%[<No description>]%",
-			"LIKE": "Like",
-			"DISLIKE": "Dislike",
-			"LINK": "Link",
-			"SAVE": "Save",
-			"DOWNLOAD": "Download",
-			"REPORT": "Report",
-			"DELETE": "Delete"
-		},
-		"VIDEO": {
-			"DEFAULT_DESCRIPTION": "%[<;No description>]%",
-			"LIKE": "Like",
-			"DISLIKE": "Dislike",
-			"LINK": "Link",
-			"SAVE": "Save",
-			"DOWNLOAD": "Download",
-			"REPORT": "Report",
-			"DELETE": "Delete"
-		},
-		"POST": {
-			"LINK": "Link",
-			"ARCHIVE": "Archive",
-			"REPORT": "Report",
-			"DELETE": "Delete",
-			"LIKE": "Like",
-			"DISLIKE": "Dislike",
-			"REPOST": "Repost"
-		}
-	},
-	"AUDIOPLAYER": {
-		"DEFAULT": {
-			"TITLE": "Untitled",
-			"ARTIST": "Unknown",
-			"LYRICS": ""
-		},
-		"LINK": "Link",
-		"SAVE": "Save",
-		"DOWNLOAD": "Download",
-		"REPORT": "Report",
-		"DELETE": "Delete"
-	},
-	"PROFILE": {
-		"DEFAULT": {
-			"NAME": "Anonym",
-			"BIO": "<p>This user has not yet edited own bio.</p>",
-			"SELF_BIO": "<p>Hello. This is your homepage. First of all, you need to confirm your account using the link that we sent to the email you specified. After confirmation, all sode.su functionality will become available. Click on a gear to edit the profile. Pay attention that you already got a wall on which only you can write. Have fun.</p>"
-		},
-		"NOT_SPECIFIED": {
-			"LOCATION": "Not specified",
-			"LANGUAGES": "Not specified",
-			"WEBSITE": "Not specified"
-		},
-		"LOCATION": "Location: ",
-		"LANGUAGES": "Languages: ",
-		"WEBSITE": "Website: ",
-		"OPEN_CHAT": "Open chat",
-		"FRIEND": "Friend",
-		"THEME": "Theme",
-		"IMAGES": "Images",
-		"VIDEOS": "Videos",
-		"MUSIC": "Music",
-		"EDIT": {
-			"TITLE": "Edit profile – sode.su",
-			"COVER": "Cover",
-			"AVATAR": "Avatar",
-			"NAME": "Name",
-			"NAME_PLACEHOLDER": "Maximum 150 characters...",
-			"BIO": "Bio",
-			"BIO_PLACEHOLDER": "Maximum 15000 characters...",
-			"LOCATION": "Location",
-			"LOCATION_PLACEHOLDER": "Maximum 150 characters...",
-			"LANGUAGES": "Languages",
-			"WEBSITE": "Website",
-			"WEBSITE_PLACEHOLDER": "Maximum 150 characters...",
-			"STYLES": {
-				"TITLE": "Styles",
-				"PROFILE": "Profile",
-				"FRIENDS": "Friends list",
-				"CHATS": "Chats",
-				"FEED": "Feed",
-				"CLUBS": "Clubs list",
-				"IMAGES": "Gallery",
-				"VIDEOS": "Video platform",
-				"MUSIC": "Audioplayer",
-				"STYLES": "Themes"
-			},
-			"CANCEL": "Cancel",
-			"SUBMIT": "Save",
-			"ERRORS": {
-				"TITLE": "Profile editing failed",
-				"EMPTY_HEADER": "Profile name is empty.",
-				"HEADER_IS_TOO_LONG": "Profile name is too long.",
-				"HACKER_ATTACK": "Impermissible links in text.",
-				"INVALID_DATA": "No such language.",
-				"OBJ_DOES_NOT_EXIST": "No such style."
-			}
-		}
-	},
-	"WALL": {
-		"NEW_POST": {
-			"PLACEHOLDER": "New post, maximum 15000 characters...",
-			"ANONYMLY": "Anonymly",
-			"EMOJI": "Emoji",
-			"ATTACH": "Attach",
-			"RESET": "Очистить",
-			"SUBMIT": "Submit",
-			"ERRORS": {
-				"TITLE": "New post failed",
-				"EMPTY_TEXT": "Post text is empty.",
-				"TEXT_IS_TOO_LONG": "Post text is too long.",
-				"FORBIDDEN": "Forbidden. Maybe it is not your wall.",
-				"HACKER_ATTACK": "Impermissible links in text."
-			}
-		},
-		"POSTS": {
-			"UNPIN": "Unpin",
-			"PIN": "Pin",
-			"LINK": "Link",
-			"ARCHIVE": "Archive",
-			"REPORT": "Report",
-			"DELETE": "Delete",
-			"LIKE": "Like",
-			"DISLIKE": "Dislike",
-			"REPOST": "Repost",
-			"DEPLOY": "Deploy",
-			"DELETE_FRAME": {
-				"TITLE": "Delete the post #{{NUMBER}}?",
-				"TEXT": "This action cannot be undone."
-			},
-			"ERRORS": {
-				"UNPIN_TITLE": "Post unpinning failed",
-				"PIN_TITLE": "Post pinning failed",
-				"DELETE_TITLE": "Post deletion failed",
-				"FORBIDDEN": "Forbidden. Maybe it is not your wall.",
-				"OBJ_DOES_NOT_EXIST": "The post does not exists."
-			}
-		},
-		"SHOW_MORE_POSTS": "Show more posts",
-		"SHOW_ALL_POSTS": "Show all posts",
-		"STUB": "There are no posts on this wall",
-		"ORIGINAL_POST_HAS_BEEN_DELETED": "Original post has been deleted!"
-	},
-	"FRIENDS": {
-		"TITLE": "Friends – sode.su",
-		"MUTUAL": "Mutual",
-		"INCOMING": "Incoming",
-		"OUTCOMING": "Outcoming",
-		"UNFRIEND": "Unfriend",
-		"ACCEPT": "Accept",
-		"REJECT": "Reject",
-		"WITHDRAW": "Withdraw",
-		"MUTUAL_STUB": "You have no mutual friends",
-		"INCOMING_STUB": "You have no incoming friend requests",
-		"OUTCOMING_STUB": "You have no outcoming friend requests",
-		"NEW_FRIEND": {
-			"TITLE": "New friend",
-			"TEXT": "The user {{USER}} added to friends."
-		},
-		"ERRORS": {
-			"GETTING_FRIENDS_TITLE": "Error getting friends list",
-			"FRIEND_TITLE": "Adding to friends failed",
-			"INACCESSIBLE_FRIEND": "The user {{USER}} cannot be added to friends.",
-			"ALREADY_FRIENDED": "The user {{USER}} is already your friend.",
-			"UNFRIEND_TITLE": "Removing from friends failed."
-		}
-	},
-	"THEMES": {
-		"TITLE": "Design themes – sode.su",
-		"NAV": {
-			"FONTS": "Fonts",
-			"BASIC": "Basic",
-			"PROFILE": "Profile",
-			"CLUBS": "Clubs",
-			"FRIENDS": "Friends",
-			"FEED": "Feed",
-			"CLUBS_LIST": "Clubs list",
-			"IMAGES": "Gallery",
-			"VIDEOS": "Video platform",
-			"MUSIC": "Audioplayer"
-		},
-		"FORM": {
-			"GO_TO_INSTRUCTION": "Go to instruction",
-			"DOWNLOAD_TEST_PAGE": "Download test page",
-			"DRAGDROP_STYLE": "Click or drag&drop a file here to upload a new style",
-			"DRAGDROP_FONT": "Click or drag&drop a file here to upload a new font",
-			"NAME": "Name",
-			"AUTHOR": "Author",
-			"BUTTON": "Upload",
-			"NAME_PLACEHOLDER": "Maximum 150 characters...",
-			"AUTHOR_PLACEHOLDER": "Maximum 150 characters...",
-			"FILE_UPLOADING": "File uploading...",
-			"ERRORS": {
-				"FILE_IS_TOO_LARGE": "File is too large!",
-				"FILE_IS_NOT_SELECTED": "File is not selected!",
-				"NAME_IS_NOT_FILLED": "Name is not filled!",
-				"NAME_IS_TOO_LONG": "Name is too long!",
-				"AUTHOR_IS_NOT_FILLED": "Author is not filled!",
-				"AUTHOR_IS_TOO_LONG": "Author is too long!"
-			}
-		},
-		"COMMON_COPYRIGHT": "All content uploaded to sode.su without licenses and copyright notices belongs to the its community by default. Any free license gives you copyright, but you shoud ensure that users comply with the terms of the contract yourself. The sode.su administration will help you stop the violation if you ask for, but do not take responsibility to look for them.",
-		"HASH": "hash: ",
-		"RENAME": "Rename",
-		"REMOVE": "Remove",
-		"STUBS": {
-			"FONTS": "You have no fonts",
-			"BASIC": "You have no basic styles",
-			"PROFILE": "You have no styles for profile",
-			"CLUBLS": "You have no styles for clubs",
-			"FRIENDS": "You have no styles for friends list",
-			"FEED": "You have no styles for feed",
-			"CLUBS_LIST": "You have no styles for clubs list",
-			"IMAGES": "You have no styles for gallery",
-			"VIDEOS": "You have no styles for video platform",
-			"MUSIC": "You have no styles for audioplayer"
-		}
-	},
-	"STYLE": {
-		"TITLE": " – sode.su style",
-		"INFO": {
-			"TO_THEMES": "To themes",
-			"ADD": "Add",
-			"DOWNLOAD": "Download",
-			"REPORT": "Report",
-			"DELETE": "Delete",
-			"TO_COMMENTS": "To comments",
-			"HASH": "hash: ",
-			"AUTHOR": "Author: ",
-			"COUNTER": "Saves count: ",
-			"TYPE": {
-				"BASIC": "basic style",
-				"PROFILE": "style for frofile",
-				"CLUBS": "style for clubs",
-				"FRIENDS": "style for friends list",
-				"FEED": "style for feed",
-				"CLUBS_LIST": "style for clubs list",
-				"IMAGES": "style for gallery",
-				"VIDEOS": "style for video platform",
-				"MUSIC": "style for audioplayer"
-			}
-		},
-		"COMMENTS": {
-			"STUB": "There are no comments on this style",
-			"MORE_COMMENTS": "More comments",
-			"ALL_COMMENTS": "All comments",
-			"COMMENT_HAS_BEEN_DELETED": "Comment has been deleted!",
-			"REPORT_COMMENT": "Report",
-			"DELETE_COMMENT": "Delete",
-			"PLACEHOLDER": "Your comment here, maximum 1500 characters...",
-			"ANONYMLY": "Anonymly",
-			"ATTACH": "Attach",
-			"RESET": "Reset",
-			"SUBMIT": "Submit"
-		},
-		"ERROR": {
-			"TITLE": "Loading error",
-			"TEXT": "This style doesnt seem to exist."
-		}
-	},
-	"FONT": {
-		"TITLE": " – sode.su font",
-		"INFO": {
-			"TO_THEMES": "To themes",
-			"ADD": "Add",
-			"DOWNLOAD": "Download",
-			"REPORT": "Report",
-			"DELETE": "Delete",
-			"TO_COMMENTS": "To comments",
-			"HASH": "hash: ",
-			"AUTHOR": "Author: ",
-			"COUNTER": "Saves count: ",
-			"TYPE": "font"
-		},
-		"PANGRAM": "The quick brown fox jumps over the lazy dog. <br /> 123456789',.!?[]\"#§_%|@\\¤:^&amp;&lt;&gt;{}`~∞+–/*;=()-¬",
-		"COMMENTS": {
-			"STUB": "There are no comments on this font",
-			"MORE_COMMENTS": "More comments",
-			"ALL_COMMENTS": "All comments",
-			"COMMENT_HAS_BEEN_DELETED": "Comment has been deleted!",
-			"REPORT_COMMENT": "Report",
-			"DELETE_COMMENT": "Delete",
-			"PLACEHOLDER": "Your comment here, maximum 1500 characters...",
-			"ANONYMLY": "Anonymly",
-			"ATTACH": "Attach",
-			"RESET": "Reset",
-			"SUBMIT": "Submit"
-		},
-		"ERROR": {
-			"TITLE": "Loading error",
-			"TEXT": "This font doesnt seem to exist."
-		}
-	},
-	"IMAGES": {
-		"TITLE": "Images – sode.su",
-		"NEW_ALBUM": {
-			"TITLE": "New album",
-			"NAME": "Name",
-			"DESCRIPTION": "Description",
-			"NAME_PLACEHOLDER": "Maximum 150 characters...",
-			"DESCRIPTION_PLACEHOLDER": "Maximum 1500 characters...",
-			"PRIVATE": "Private",
-			"PROTECTED": "Protected",
-			"PUBLIC": "Public",
-			"PRIVATE_TITLE": "Private album: only you can see its info and images grid",
-			"PROTECTED_TITLE": "Protected album: you and your friends can see its info and images grid",
-			"PUBLIC_TITLE": "Public album: all users can see its info and images grid",
-			"SUBMIT": "Create",
-			"ERRORS": {
-				"TITLE": "Error creating new album",
-				"NAME_IS_NOT_FILLED": "Name is not filled.",
-				"NAME_IS_TOO_LONG": "Name is too long.",
-				"DESCRIPTION_IS_TOO_LONG": "Description is too long."
-			}
-		},
-		"ALBUMS": {
-			"ERROR": "Albums loading error",
-			"STUB": "This user has not any albums",
-			"PRIVATE": "Private",
-			"PROTECTED": "Protected",
-			"PUBLIC": "Public",
-			"IMAGES_COUNT": {
-				"0": " images",
-				"1": " image",
-				"2": " images",
-				"3": " images",
-				"4": " images",
-				"5": " images",
-				"6": " images",
-				"7": " images",
-				"8": " images",
-				"9": " images"
-			},
-			"@": {
-				"name": "Avatars (@)",
-				"description": "Images that can be set as avatars of the profile."
-			},
-			"+": {
-				"name": "Images (+)",
-				"description": "Default public medley with this and that images."
-			}
-		}
+	"errors": {},
+	"markup": {
+		"heading": "Heading",
+		"quote": "Quote",
+		"bold": "Bold",
+		"italic": "Italic",
+		"underline": "Underline",
+		"overline": "Overline",
+		"strikethrough": "Strikethrough",
+		"superscript": "Superscript",
+		"subscript": "Subscript",
+		"monospace": "Monospace",
+		"spoiler": "Spoiler"
 	}
 }

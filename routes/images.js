@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 router.get(/^\/(@|~)([^\/]*)\/i\/([^\/]*)\/([^\/]*)\.(jpeg|png|gif|bmp|webp|svg)$/, async (req, res, next) => {
     try {
         const image = await db.getImage(
-            api.ENTITIES[req.params[0]], req.params[1], req.params[2], req.params[3], req.params[4]
+            api.entities[req.params[0]], req.params[1], req.params[2], req.params[3], req.params[4]
         );
         if (!image)
             return next(404);
