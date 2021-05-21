@@ -259,6 +259,7 @@ body {
   right: 40vw;
   bottom: 40vh;
   left: 40vw;
+  display: none;
   background-color: #F0F8FF;
   border: 2vh ridge #7D80B8;
   border-radius: 50%;
@@ -509,7 +510,8 @@ body {
 
 #auth {
   z-index: 100;
-  position: relative;
+  position: fixed;
+  right: 0;
   float: right;
   height: 2.4rem; }
 
@@ -552,6 +554,8 @@ body {
   transform: scaleX(0.9); }
 
 #self {
+  position: fixed;
+  right: 0;
   display: none;
   float: right;
   cursor: pointer; }
@@ -753,6 +757,9 @@ select.menu {
 .night #sign-up-box {
   background: rgba(50, 50, 100, 0.5); }
 
+#log-in-box.open {
+  display: block; }
+
 #log-in,
 #sign-up {
   position: fixed;
@@ -774,7 +781,12 @@ select.menu {
   box-shadow: none; }
 
 #log-in {
-  height: 12.3rem; }
+  height: calc(4rem + 40px); }
+
+#telegram-login-sodesu_bot {
+  display: block;
+  margin: 1rem auto;
+}
 
 #sign-up {
   height: 15rem; }

@@ -15,6 +15,7 @@ const imgRouter   = require("./routes/img");
 const cssRouter   = require("./routes/css");
 const htmlRouter  = require("./routes/html");
 const jsRouter    = require("./routes/js");
+const apiRouter   = require("./routes/api");
 
 const db    = require("./db");
 const api   = require("./api");
@@ -33,14 +34,22 @@ class Server
 
         this.app = express();
 
-        this.app.use(useragent.express());
         this.app.use(cookieParser());
+        this.app.use(useragent.express());
         this.app.use(helmet());
-        this.app.use(csrf({ cookie: true }));
+//        this.app.use(csrf({ cookie: true }));
         this.app.use(compress());
         this.app.use(decompress());
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
+
+        this.app.use(helmet.contentSecurityPolicy({
+            useDefaults: true,
+            directives: {
+                defaultSrc: ["'self'", "oauth.telegram.org"],
+                styleSrc:   ["'self'"],
+                scriptSrc:  ["'self'", "'unsafe-eval'", "telegram.org"]
+        }}));
 
         this.app.use((req, res, next) => {
             res.locals.clientLang = req.query["lang"] || req.cookies["lang"];
@@ -60,9 +69,11 @@ class Server
         this.app.use("/css",  cssRouter);
         this.app.use("/html", htmlRouter);
         this.app.use("/js",   jsRouter);
+        this.app.use("/api",  apiRouter);
         this.app.use("/",     indexRouter);
 
         this.app.use((err, req, res, next) => {
+            console.error(req.cookies);
             res
                 .status(err)
                 .type(".html")
@@ -90,9 +101,9 @@ class Server
             console.log(`Server running at localhost on port ${this.port}`);
         });
 
-        server.on("connection", socket => {
-            socket.keepAlive(true);
-        })
+//        server.on("connection", socket => {
+//            socket.keepAlive(true);
+//        });
     }
 
     async stop()
