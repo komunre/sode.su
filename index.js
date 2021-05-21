@@ -18,10 +18,10 @@ rl.on("line", async line => {
     const command = line.trim();
 
     switch (command) {
-        case 'stop':
+        case "stop":
             await server.stop();
         break;
-        case 'reload':
+        case "reload":
             await server.reload();
         break;
     }
