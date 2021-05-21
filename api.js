@@ -56,7 +56,9 @@ module.exports = {
         auth:  "api/auth"
     },
     errors: {
-        "ok": 0
+        "ok":           0,
+        "invalid_data": 1,
+        "unauthorized": 2
     },
     limits: {
         comment_length: 1500,

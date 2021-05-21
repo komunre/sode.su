@@ -1,4 +1,5 @@
-const pg = require("pg");
+const crypto = require("crypto");
+const pg     = require("pg");
 
 entityTables = {
     "user": "users",
@@ -19,6 +20,11 @@ class DBHelper
             port:     process.env.DBPORT || 5432,
             max:      1
         };
+
+        this.tgSecretKey = crypto
+            .createHash("sha256")
+            .update(process.env.BOT_TOKEN)
+            .digest();
     }
 
     async start()

@@ -73,7 +73,7 @@ class Server
         this.app.use("/",     indexRouter);
 
         this.app.use((err, req, res, next) => {
-            console.error(req.cookies);
+            console.error(err);
             res
                 .status(err)
                 .type(".html")
