@@ -81,6 +81,10 @@ class DBHelper
         if (!image)
             return null;
     }
+
+    getPool() {
+        return this.pool;
+    }
 }
 
 module.exports = new DBHelper();

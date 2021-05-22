@@ -59,7 +59,8 @@ router.get("/", async (req, res) => {
             css:       "css/index.css",
             canonical: `${api.host}/`,
             title:     i18n[res.locals.clientLang].index.title,
-            type:      "website"
+            type:      "website",
+            authorized: req.locals.authorized,
         }));
 });
 

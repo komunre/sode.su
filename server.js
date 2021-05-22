@@ -21,6 +21,7 @@ const db    = require("./db");
 const api   = require("./api");
 const i18n  = require("./i18n");
 const cache = require("./cache");
+const auth  = require("./auth");
 
 
 
@@ -60,6 +61,12 @@ class Server
 
             res.set("Server", "Desu");
             res.set("X-API-Version", "0");
+
+            next();
+        });
+
+        this.app.use((req, res, next) => {
+            auth.checkKey(req, res, this.db);
 
             next();
         });
